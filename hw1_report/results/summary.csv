@@ -1,0 +1,33 @@
+name,group,overrides,eval_loss,perplexity,steps,tokens_m
+wsd_bs32_lr6e-4,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.0006, 'lr_scheduler_type': 'warmup_stable_decay', 'max_steps': 1720, 'lr_scheduler_kwargs': {'num_decay_steps': 344}}",4.1300,62.2,1720,28.2
+final_wsd_seed1,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.0006, 'lr_scheduler_type': 'warmup_stable_decay', 'max_steps': 1720, 'lr_scheduler_kwargs': {'num_decay_steps': 344}, 'seed': 1}",4.1570,63.9,1720,28.2
+final_wsd_seed3,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.0006, 'lr_scheduler_type': 'warmup_stable_decay', 'max_steps': 1720, 'lr_scheduler_kwargs': {'num_decay_steps': 344}, 'seed': 3}",4.1611,64.1,1720,28.2
+no_tf32,compile / оптимизатор / dtype,"{'tf32': false}",4.1680,64.6,1831,30.0
+final_wsd_seed2,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.0006, 'lr_scheduler_type': 'warmup_stable_decay', 'max_steps': 1720, 'lr_scheduler_kwargs': {'num_decay_steps': 344}, 'seed': 2}",4.1739,65.0,1720,28.2
+final_wsd_seed42,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.0006, 'lr_scheduler_type': 'warmup_stable_decay', 'max_steps': 1720, 'lr_scheduler_kwargs': {'num_decay_steps': 344}, 'save_strategy': 'steps', 'save_steps': 344, 'save_total_limit': null}",4.1886,65.9,1720,28.2
+bs32_lr6e-4_seed2,batch size / lr / накопление,"{'seed': 2}",4.1905,66.1,1848,30.3
+no_bf16,compile / оптимизатор / dtype,"{'bf16': false}",4.1910,66.1,1856,30.4
+bs32_lr6e-4_seed1,batch size / lr / накопление,"{'seed': 1}",4.1979,66.5,1837,30.1
+adamw_torch,compile / оптимизатор / dtype,"{'optim': 'adamw_torch'}",4.2153,67.7,1768,29.0
+bs64_lr6e-4,batch size / lr / накопление,"{'per_device_train_batch_size': 64}",4.2301,68.7,951,31.2
+bs16_lr3e-4,batch size / lr / накопление,"{'per_device_train_batch_size': 16, 'learning_rate': 0.0003}",4.2314,68.8,3383,27.7
+bs32_lr6e-4,batch size / lr / накопление,"{}",4.2375,69.2,1819,29.8
+bs32_lr3e-4,batch size / lr / накопление,"{'learning_rate': 0.0003}",4.2460,69.8,1841,30.2
+bs16_ga2,batch size / lr / накопление,"{'per_device_train_batch_size': 16, 'gradient_accumulation_steps': 2}",4.2476,69.9,1765,28.9
+lin_bs32_lr6e-4,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.0006, 'lr_scheduler_type': 'linear', 'max_steps': 1720}",4.2480,70.0,1720,28.2
+bs64_lr1e-3,batch size / lr / накопление,"{'per_device_train_batch_size': 64, 'learning_rate': 0.001}",4.2757,71.9,957,31.4
+bs16_lr6e-4,batch size / lr / накопление,"{'per_device_train_batch_size': 16}",4.2839,72.5,3414,28.0
+cos_bs32_lr1e-3,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.001, 'lr_scheduler_type': 'cosine', 'max_steps': 1720}",4.3098,74.4,1720,28.2
+cos_bs64_lr1e-3,шедулер lr (с max_steps),"{'per_device_train_batch_size': 64, 'learning_rate': 0.001, 'lr_scheduler_type': 'cosine', 'max_steps': 900}",4.3189,75.1,900,29.5
+bs32_lr1e-3,batch size / lr / накопление,"{'learning_rate': 0.001}",4.3240,75.5,1809,29.6
+cos_bs32_lr6e-4,шедулер lr (с max_steps),"{'per_device_train_batch_size': 32, 'learning_rate': 0.0006, 'lr_scheduler_type': 'cosine', 'max_steps': 1720}",4.3269,75.7,1720,28.2
+bs8_ga4,batch size / lr / накопление,"{'per_device_train_batch_size': 8, 'gradient_accumulation_steps': 4}",4.3433,77.0,1620,26.5
+bs8_lr3e-4,batch size / lr / накопление,"{'per_device_train_batch_size': 8, 'learning_rate': 0.0003}",4.3498,77.5,6030,24.7
+bs64_lr3e-4,batch size / lr / накопление,"{'per_device_train_batch_size': 64, 'learning_rate': 0.0003}",4.3571,78.0,955,31.3
+cos_bs64_lr6e-4,шедулер lr (с max_steps),"{'per_device_train_batch_size': 64, 'learning_rate': 0.0006, 'lr_scheduler_type': 'cosine', 'max_steps': 900}",4.3605,78.3,900,29.5
+cos_bs16_lr6e-4,шедулер lr (с max_steps),"{'per_device_train_batch_size': 16, 'learning_rate': 0.0006, 'lr_scheduler_type': 'cosine', 'max_steps': 3210}",4.3706,79.1,3210,26.3
+bs8_lr6e-4,batch size / lr / накопление,"{'per_device_train_batch_size': 8}",4.3764,79.5,6028,24.7
+bs16_lr1e-3,batch size / lr / накопление,"{'per_device_train_batch_size': 16, 'learning_rate': 0.001}",4.3864,80.3,3447,28.2
+cos_bs16_lr3e-4,шедулер lr (с max_steps),"{'per_device_train_batch_size': 16, 'learning_rate': 0.0003, 'lr_scheduler_type': 'cosine', 'max_steps': 3210}",4.4538,86.0,3210,26.3
+no_compile,compile / оптимизатор / dtype,"{'torch_compile': false}",4.5322,93.0,1257,20.6
+adafactor,compile / оптимизатор / dtype,"{'optim': 'adafactor'}",4.5960,99.1,1613,26.4
