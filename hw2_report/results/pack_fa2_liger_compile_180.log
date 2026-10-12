@@ -1,0 +1,28 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0] Graph break from `Tensor.item()`, consider setting:
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0]     torch._dynamo.config.capture_scalar_outputs = True
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0] or:
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0]     env TORCHDYNAMO_CAPTURE_SCALAR_OUTPUTS=1
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0] to include these operations in the captured graph.
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0] 
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0] Graph break: from user code at:
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0]   File "/opt/python/lib/python3.10/site-packages/transformers/modeling_flash_attention_utils.py", line 354, in torch_dynamo_resume_in_prepare_fa_kwargs_from_position_ids_at_335
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0]     max_length_q = max_length_q.item()
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0] 
+W1004 21:31:53.813000 5871 torch/_dynamo/variables/tensor.py:869] [22/0] 
+{"step": 10, "elapsed_seconds": 58.56817239499651, "step_seconds": 0.9395432570017874, "target_tokens": 31521, "warmup": true}
+Traceback (most recent call last):
+  File "/home/jovyan/train.py", line 309, in <module>
+    main()
+  File "/home/jovyan/train.py", line 294, in main
+    trainer.train()
+  File "/opt/python/lib/python3.10/site-packages/transformers/trainer.py", line 2328, in train
+    return inner_training_loop(
+  File "/opt/python/lib/python3.10/site-packages/transformers/trainer.py", line 2754, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/opt/python/lib/python3.10/site-packages/transformers/trainer.py", line 3223, in _maybe_log_save_evaluate
+    self.log(logs, start_time)
+  File "/home/jovyan/train.py", line 161, in log
+    raise FloatingPointError(f"Значение {key} не валидное")
+FloatingPointError: Значение loss не валидное

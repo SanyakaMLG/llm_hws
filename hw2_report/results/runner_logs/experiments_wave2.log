@@ -1,0 +1,51 @@
+start bs64_ga1 on GPU 0
+start offload_fa2 on GPU 1
+start liger_bs64_ga1 on GPU 2
+start offload on GPU 3
+done  bs64_ga1 on GPU 0, exit code 1
+start pf_fa2_bs64_ga1 on GPU 0
+done  offload on GPU 3, exit code 1
+start pf_fa2_liger on GPU 3
+done  liger_bs64_ga1 on GPU 2, exit code 0
+start pf_fa2_liger_bs256_ga1 on GPU 2
+done  offload_fa2 on GPU 1, exit code 0
+start pack_fa2_liger on GPU 1
+done  pf_fa2_bs64_ga1 on GPU 0, exit code 0
+start pack_fa2_liger_bs64_ga1 on GPU 0
+done  pf_fa2_liger on GPU 3, exit code 0
+start pack_fa2_liger_ckpt_bs128_ga1 on GPU 3
+done  pf_fa2_liger_bs256_ga1 on GPU 2, exit code 0
+start compile_180 on GPU 2
+done  pack_fa2_liger on GPU 1, exit code 0
+start pf_fa2_compile_180 on GPU 1
+done  pack_fa2_liger_bs64_ga1 on GPU 0, exit code 0
+start pf_fa2_liger_compile_180 on GPU 0
+done  pack_fa2_liger_ckpt_bs128_ga1 on GPU 3, exit code 0
+start pack_fa2_liger_compile_180 on GPU 3
+done  pack_fa2_liger_compile_180 on GPU 3, exit code 1
+done  compile_180 on GPU 2, exit code 0
+done  pf_fa2_compile_180 on GPU 1, exit code 0
+done  pf_fa2_liger_compile_180 on GPU 0, exit code 0
+name                              sec     tok/s      S  peak GiB  val loss  steps
+baseline_300                      300      7008   1.00      41.2     6.601    368
+baseline_90                        90      7322   1.00      41.2     8.130    114
+bs64_ga1                         FAILED, see results/bs64_ga1.log
+grad_ckpt                          90      6085   0.83      17.4     8.217     95
+fa2                                90      7749   1.06      39.3     8.096    121
+padding_free_fa2                   90     19549   2.67      15.1     6.854    309
+packing_fa2                        90     22587   3.08      40.2     8.211     64
+compile                            90       n/a    n/a      26.0    11.235      2
+liger                              90      7050   0.96      26.8     8.159    106
+offload                          FAILED, see results/offload.log
+offload_fa2                        90      1393   0.19      16.4    11.090     20
+liger_bs64_ga1                     90      6702   0.92      43.9     8.163    104
+pf_fa2_bs64_ga1                    90     20406   2.79      20.1     6.815    323
+pf_fa2_liger                       90     17035   2.33      12.3     7.115    262
+pf_fa2_liger_bs256_ga1             90     25880   3.53      34.4     7.993    101
+pack_fa2_liger                     90     26678   3.64      25.8     8.142     75
+pack_fa2_liger_bs64_ga1            90     27387   3.74      41.9     8.137     76
+pack_fa2_liger_ckpt_bs128_ga1      90     23722   3.24      15.5     9.382     33
+compile_180                       180     11587   1.58      31.2     8.217     95
+pf_fa2_compile_180                180     25433   3.47      12.2     5.780    607
+pf_fa2_liger_compile_180          180     20151   2.75      15.3     7.472    215
+pack_fa2_liger_compile_180       FAILED, see results/pack_fa2_liger_compile_180.log

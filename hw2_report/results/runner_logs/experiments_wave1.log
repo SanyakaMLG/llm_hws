@@ -1,0 +1,36 @@
+start baseline_300 on GPU 0
+start baseline_90 on GPU 1
+start bs64_ga1 on GPU 2
+start grad_ckpt on GPU 3
+done  bs64_ga1 on GPU 2, exit code 1
+start fa2 on GPU 2
+done  baseline_90 on GPU 1, exit code 0
+start padding_free_fa2 on GPU 1
+done  grad_ckpt on GPU 3, exit code 0
+start packing_fa2 on GPU 3
+done  fa2 on GPU 2, exit code 0
+start compile on GPU 2
+done  padding_free_fa2 on GPU 1, exit code 0
+start liger on GPU 1
+done  packing_fa2 on GPU 3, exit code 0
+start offload on GPU 3
+done  compile on GPU 2, exit code 0
+done  offload on GPU 3, exit code 1
+done  baseline_300 on GPU 0, exit code 0
+done  liger on GPU 1, exit code 0
+name                      sec     tok/s      S  peak GiB  val loss  steps
+baseline_300              300      7008   1.00      41.2     6.601    368
+baseline_90                90      7322   1.00      41.2     8.130    114
+bs64_ga1                 FAILED, see results/bs64_ga1.log
+grad_ckpt                  90      6085   0.83      17.4     8.217     95
+fa2                        90      7749   1.06      39.3     8.096    121
+padding_free_fa2           90     19549   2.67      15.1     6.854    309
+packing_fa2                90     22587   3.08      40.2     8.211     64
+Traceback (most recent call last):
+  File "/home/jovyan/experiments.py", line 84, in <module>
+    main()
+  File "/home/jovyan/experiments.py", line 80, in main
+    report()
+  File "/home/jovyan/experiments.py", line 68, in report
+    speedup = summary["tokens_per_second"] / reference["tokens_per_second"] if reference else float("nan")
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'float'

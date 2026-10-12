@@ -1,0 +1,76 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0] Graph break from `Tensor.item()`, consider setting:
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0]     torch._dynamo.config.capture_scalar_outputs = True
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0] or:
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0]     env TORCHDYNAMO_CAPTURE_SCALAR_OUTPUTS=1
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0] to include these operations in the captured graph.
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0] 
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0] Graph break: from user code at:
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0]   File "/opt/python/lib/python3.10/site-packages/transformers/modeling_flash_attention_utils.py", line 354, in torch_dynamo_resume_in_prepare_fa_kwargs_from_position_ids_at_335
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0]     max_length_q = max_length_q.item()
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0] 
+W1004 21:31:32.741000 5547 torch/_dynamo/variables/tensor.py:869] [22/0] 
+W1004 21:33:28.265000 5547 torch/_dynamo/convert_frame.py:906] [47/8] torch._dynamo hit config.cache_size_limit (8)
+W1004 21:33:28.265000 5547 torch/_dynamo/convert_frame.py:906] [47/8]    function: 'torch_dynamo_resume_in_fused_linear_cross_entropy_forward_at_63' (/opt/python/lib/python3.10/site-packages/liger_kernel/ops/fused_linear_cross_entropy.py:63)
+W1004 21:33:28.265000 5547 torch/_dynamo/convert_frame.py:906] [47/8]    last reason: 47/0: L['BT'] == 3739                                             
+W1004 21:33:28.265000 5547 torch/_dynamo/convert_frame.py:906] [47/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1004 21:33:28.265000 5547 torch/_dynamo/convert_frame.py:906] [47/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+{"step": 10, "elapsed_seconds": 122.24175783409737, "step_seconds": 0.24754544417373836, "target_tokens": 5417, "warmup": true}
+{'loss': 11.2274, 'grad_norm': 5.90625, 'learning_rate': 1.3499999999999998e-05, 'epoch': 0.002614720878546215}
+{"step": 20, "elapsed_seconds": 125.3708604851272, "step_seconds": 0.2580821621231735, "target_tokens": 5687, "warmup": false}
+{'loss': 11.1722, 'grad_norm': 5.78125, 'learning_rate': 2.8499999999999998e-05, 'epoch': 0.00522944175709243}
+{"step": 30, "elapsed_seconds": 128.2448710030876, "step_seconds": 0.25474644894711673, "target_tokens": 5617, "warmup": false}
+{'loss': 10.9368, 'grad_norm': 5.96875, 'learning_rate': 4.3499999999999993e-05, 'epoch': 0.007844162635638646}
+{"step": 40, "elapsed_seconds": 131.5909511439968, "step_seconds": 0.29325960390269756, "target_tokens": 5080, "warmup": false}
+{'loss': 10.1077, 'grad_norm': 3.296875, 'learning_rate': 5.85e-05, 'epoch': 0.01045888351418486}
+{"step": 50, "elapsed_seconds": 134.41811902914196, "step_seconds": 0.2486533490009606, "target_tokens": 5460, "warmup": false}
+{'loss': 9.1238, 'grad_norm': 1.578125, 'learning_rate': 7.35e-05, 'epoch': 0.013073604392731076}
+{"step": 60, "elapsed_seconds": 137.66619884013198, "step_seconds": 0.3940045170020312, "target_tokens": 6316, "warmup": false}
+{'loss': 8.6157, 'grad_norm': 1.1640625, 'learning_rate': 8.849999999999998e-05, 'epoch': 0.015688325271277292}
+{"step": 70, "elapsed_seconds": 140.52405546512455, "step_seconds": 0.27689768420532346, "target_tokens": 6375, "warmup": false}
+{'loss': 8.4646, 'grad_norm': 1.3828125, 'learning_rate': 0.00010349999999999998, 'epoch': 0.018303046149823508}
+{"step": 80, "elapsed_seconds": 143.41225698008202, "step_seconds": 0.24138349015265703, "target_tokens": 5204, "warmup": false}
+{'loss': 8.4437, 'grad_norm': 1.09375, 'learning_rate': 0.0001185, 'epoch': 0.02091776702836972}
+{"step": 90, "elapsed_seconds": 146.37551436992362, "step_seconds": 0.2939200489781797, "target_tokens": 5889, "warmup": false}
+{'loss': 8.3778, 'grad_norm': 1.375, 'learning_rate': 0.0001335, 'epoch': 0.023532487906915936}
+{"step": 100, "elapsed_seconds": 149.00393852591515, "step_seconds": 0.25503471097908914, "target_tokens": 5564, "warmup": false}
+{'loss': 8.2916, 'grad_norm': 1.375, 'learning_rate': 0.00014849999999999998, 'epoch': 0.026147208785462152}
+{"step": 110, "elapsed_seconds": 151.68719035713002, "step_seconds": 0.2635072951670736, "target_tokens": 6100, "warmup": false}
+{'loss': 8.3064, 'grad_norm': 1.265625, 'learning_rate': 0.0001635, 'epoch': 0.028761929664008368}
+{"step": 120, "elapsed_seconds": 154.50971195404418, "step_seconds": 0.23144258907996118, "target_tokens": 4951, "warmup": false}
+{'loss': 8.2553, 'grad_norm': 2.25, 'learning_rate': 0.00017849999999999997, 'epoch': 0.031376650542554584}
+{"step": 130, "elapsed_seconds": 157.18648001900874, "step_seconds": 0.26000270689837635, "target_tokens": 5866, "warmup": false}
+{'loss': 8.2009, 'grad_norm': 1.1875, 'learning_rate': 0.0001935, 'epoch': 0.0339913714211008}
+{"step": 140, "elapsed_seconds": 159.95544226909988, "step_seconds": 0.33919518697075546, "target_tokens": 6778, "warmup": false}
+{'loss': 8.139, 'grad_norm': 1.515625, 'learning_rate': 0.00020849999999999997, 'epoch': 0.036606092299647015}
+{"step": 150, "elapsed_seconds": 162.57669893093407, "step_seconds": 0.27004718594253063, "target_tokens": 5372, "warmup": false}
+{'loss': 8.0383, 'grad_norm': 1.640625, 'learning_rate': 0.00022349999999999998, 'epoch': 0.03922081317819323}
+{"step": 160, "elapsed_seconds": 165.2823237820994, "step_seconds": 0.2725204520393163, "target_tokens": 5393, "warmup": false}
+{'loss': 8.0051, 'grad_norm': 1.2421875, 'learning_rate': 0.0002385, 'epoch': 0.04183553405673944}
+{"step": 170, "elapsed_seconds": 167.88376790704206, "step_seconds": 0.27206138195469975, "target_tokens": 6067, "warmup": false}
+{'loss': 7.9217, 'grad_norm': 1.2734375, 'learning_rate': 0.0002535, 'epoch': 0.044450254935285656}
+{"step": 180, "elapsed_seconds": 170.59507279493846, "step_seconds": 0.2678921928163618, "target_tokens": 5338, "warmup": false}
+{'loss': 7.892, 'grad_norm': 1.4296875, 'learning_rate': 0.00026849999999999997, 'epoch': 0.04706497581383187}
+{"step": 190, "elapsed_seconds": 173.46190744498745, "step_seconds": 0.44269188796170056, "target_tokens": 5735, "warmup": false}
+{'loss': 7.8136, 'grad_norm': 1.1484375, 'learning_rate': 0.00028349999999999995, 'epoch': 0.04967969669237809}
+{"step": 200, "elapsed_seconds": 176.0878402381204, "step_seconds": 0.24863722315058112, "target_tokens": 5414, "warmup": false}
+{'loss': 7.7388, 'grad_norm': 1.1484375, 'learning_rate': 0.0002985, 'epoch': 0.052294417570924304}
+{"step": 210, "elapsed_seconds": 178.72916065598838, "step_seconds": 0.27799605787731707, "target_tokens": 6532, "warmup": false}
+{'loss': 7.6871, 'grad_norm': 1.21875, 'learning_rate': 0.0003, 'epoch': 0.05490913844947052}
+{'train_runtime': 180.0402, 'train_loss': 8.67974764801735, 'epoch': 0.056216498888743624}
+{
+  "train_seconds": 180.03942397609353,
+  "optimizer_steps": 215,
+  "target_tokens": 1222147,
+  "tokens_per_second_including_warmup": 6788.218785693751,
+  "warmup_steps": 10,
+  "measured_steps": 205,
+  "measured_seconds": 57.79766614199616,
+  "tokens_per_second": 20150.69254074514,
+  "seconds_per_optimizer_step": 0.28193983483900564,
+  "peak_allocated_gib": 15.32111644744873,
+  "peak_reserved_gib": 16.8984375,
+  "validation_loss": 7.471635410177753,
+  "validation_target_tokens": 50694
+}

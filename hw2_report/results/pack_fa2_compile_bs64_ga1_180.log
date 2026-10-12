@@ -1,0 +1,57 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0] Graph break from `Tensor.item()`, consider setting:
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0]     torch._dynamo.config.capture_scalar_outputs = True
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0] or:
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0]     env TORCHDYNAMO_CAPTURE_SCALAR_OUTPUTS=1
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0] to include these operations in the captured graph.
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0] 
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0] Graph break: from user code at:
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0]   File "/opt/python/lib/python3.10/site-packages/transformers/modeling_flash_attention_utils.py", line 354, in torch_dynamo_resume_in_prepare_fa_kwargs_from_position_ids_at_335
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0]     max_length_q = max_length_q.item()
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0] 
+W1004 21:40:08.443000 14845 torch/_dynamo/variables/tensor.py:869] [17/0] 
+{"step": 10, "elapsed_seconds": 43.52663702098653, "step_seconds": 0.9973491160199046, "target_tokens": 31521, "warmup": true}
+{'loss': 11.2191, 'grad_norm': 2.59375, 'learning_rate': 1.3499999999999998e-05, 'epoch': 0.01451378809869376}
+{"step": 20, "elapsed_seconds": 53.66128195496276, "step_seconds": 1.0088512341026217, "target_tokens": 31779, "warmup": false}
+{'loss': 11.0896, 'grad_norm': 2.8125, 'learning_rate': 2.8499999999999998e-05, 'epoch': 0.02902757619738752}
+{"step": 30, "elapsed_seconds": 63.77375670685433, "step_seconds": 1.010517017915845, "target_tokens": 32091, "warmup": false}
+{'loss': 10.4475, 'grad_norm': 3.21875, 'learning_rate': 4.3499999999999993e-05, 'epoch': 0.04354136429608128}
+{"step": 40, "elapsed_seconds": 73.8974709068425, "step_seconds": 1.0124232859816402, "target_tokens": 32008, "warmup": false}
+{'loss': 9.4223, 'grad_norm': 1.1953125, 'learning_rate': 5.85e-05, 'epoch': 0.05805515239477504}
+{"step": 50, "elapsed_seconds": 84.01328859198838, "step_seconds": 1.014539163094014, "target_tokens": 32081, "warmup": false}
+{'loss': 8.6917, 'grad_norm': 0.9453125, 'learning_rate': 7.35e-05, 'epoch': 0.07256894049346879}
+{"step": 60, "elapsed_seconds": 94.13177207182162, "step_seconds": 1.0184286118019372, "target_tokens": 32150, "warmup": false}
+{'loss': 8.3739, 'grad_norm': 0.52734375, 'learning_rate': 8.849999999999998e-05, 'epoch': 0.08708272859216255}
+{"step": 70, "elapsed_seconds": 104.29735206486657, "step_seconds": 1.0183644439093769, "target_tokens": 32162, "warmup": false}
+{'loss': 8.2986, 'grad_norm': 0.4765625, 'learning_rate': 0.00010349999999999998, 'epoch': 0.10159651669085631}
+{"step": 80, "elapsed_seconds": 114.4823173028417, "step_seconds": 1.0150767378509045, "target_tokens": 32088, "warmup": false}
+{'loss': 8.2502, 'grad_norm': 0.55078125, 'learning_rate': 0.0001185, 'epoch': 0.11611030478955008}
+{"step": 90, "elapsed_seconds": 124.67879860079847, "step_seconds": 1.018131581833586, "target_tokens": 32113, "warmup": false}
+{'loss': 8.1841, 'grad_norm': 0.96875, 'learning_rate': 0.0001335, 'epoch': 0.13062409288824384}
+{"step": 100, "elapsed_seconds": 134.88525238982402, "step_seconds": 1.019965710816905, "target_tokens": 31926, "warmup": false}
+{'loss': 8.1955, 'grad_norm': 6.875, 'learning_rate': 0.00014849999999999998, 'epoch': 0.14513788098693758}
+{"step": 110, "elapsed_seconds": 145.4375852928497, "step_seconds": 1.0118416310288012, "target_tokens": 31489, "warmup": false}
+{'loss': 8.0991, 'grad_norm': 1.3671875, 'learning_rate': 0.0001635, 'epoch': 0.15965166908563136}
+{"step": 120, "elapsed_seconds": 155.63301899284124, "step_seconds": 1.017783876042813, "target_tokens": 31735, "warmup": false}
+{'loss': 7.9994, 'grad_norm': 0.83984375, 'learning_rate': 0.00017849999999999997, 'epoch': 0.1741654571843251}
+{"step": 130, "elapsed_seconds": 166.20635601202957, "step_seconds": 1.0209445341024548, "target_tokens": 31930, "warmup": false}
+{'loss': 7.9189, 'grad_norm': 1.078125, 'learning_rate': 0.0001935, 'epoch': 0.18867924528301888}
+{"step": 140, "elapsed_seconds": 176.39912570500746, "step_seconds": 1.0224049401003867, "target_tokens": 32023, "warmup": false}
+{'loss': 7.8814, 'grad_norm': 0.83203125, 'learning_rate': 0.00020849999999999997, 'epoch': 0.20319303338171263}
+{'train_runtime': 180.4996, 'train_loss': 8.832158512539333, 'epoch': 0.20899854862119013}
+{
+  "train_seconds": 180.49874767987058,
+  "optimizer_steps": 144,
+  "target_tokens": 4605298,
+  "tokens_per_second_including_warmup": 25514.29336323084,
+  "warmup_steps": 10,
+  "measured_steps": 134,
+  "measured_seconds": 136.97211065888405,
+  "tokens_per_second": 31288.938889706944,
+  "seconds_per_optimizer_step": 1.0221799302901795,
+  "peak_allocated_gib": 45.61946439743042,
+  "peak_reserved_gib": 72.9921875,
+  "validation_loss": 7.642023425509145,
+  "validation_target_tokens": 50694
+}
