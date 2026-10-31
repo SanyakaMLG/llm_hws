@@ -1,0 +1,77 @@
+{
+  "config": {
+    "name": "base",
+    "mode": "base",
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "targets": "all",
+    "lr": 0.0002,
+    "seed": 42,
+    "limit": null
+  },
+  "total_params": 1543714304,
+  "exec_accuracy": 0.6166194523135033,
+  "exec_by_complexity": {
+    "aggregation": 0.44503311258278144,
+    "basic SQL": 0.7754491017964071,
+    "multiple_joins": 0.37037037037037035,
+    "set operations": 0.15384615384615385,
+    "single join": 0.5587529976019184,
+    "subqueries": 0.39568345323741005,
+    "window functions": 0.13793103448275862
+  },
+  "mmlu": 0.5723543654750035,
+  "manual": [
+    {
+      "id": 3,
+      "complexity": "aggregation",
+      "output": "SELECT COUNT(*) FROM Accidents WHERE launch_provider IN ('SpaceX', 'Blue Origin')",
+      "correct": false
+    },
+    {
+      "id": 1,
+      "complexity": "basic SQL",
+      "output": "SELECT AVG(explainability_score) FROM creative_ai WHERE region IN ('Europe', 'North America')",
+      "correct": true
+    },
+    {
+      "id": 25,
+      "complexity": "multiple_joins",
+      "output": "SELECT P.ProgramName, SUM(D.DonationAmount) as TotalDonated\nFROM Programs P\nJOIN DonorsPrograms DP ON P.ProgramID = DP.ProgramID\nJOIN Donations D ON DP.DonorID = D.DonorID\nGROUP BY P.ProgramName;",
+      "correct": true
+    },
+    {
+      "id": 251,
+      "complexity": "set operations",
+      "output": "```sql\nSELECT \n    region,\n    COUNT(project_type) AS num_projects\nFROM \n    economic_diversification\nWHERE \n    region IN ('Europe', 'Oceania')\nGROUP BY \n    region;\n```",
+      "correct": false
+    },
+    {
+      "id": 19,
+      "complexity": "single join",
+      "output": "SELECT P.PortName, SUM(C.Weight) AS TotalCargoWeight\nFROM PORTS P\nJOIN CARGO_HANDLING CH ON P.ID = CH.PortID\nWHERE CH.CargoType = 'Fruit'\nGROUP BY P.PortName;",
+      "correct": false
+    },
+    {
+      "id": 44,
+      "complexity": "subqueries",
+      "output": "SELECT COUNT(*) FROM faculty WHERE gender = 'Female' AND department = 'Physics' AND id NOT IN (SELECT DISTINCT faculty_id FROM research_grants);",
+      "correct": true
+    },
+    {
+      "id": 18,
+      "complexity": "window functions",
+      "output": "SELECT client_id, MAX(investment) FROM daily_investments GROUP BY client_id;",
+      "correct": false
+    },
+    {
+      "prompt": "Explain in two sentences why the sky is blue.",
+      "output": "The sky appears blue because of scattering of sunlight by air molecules in the Earth's atmosphere. Shorter blue wavelengths of light are scattered more than other colors due to their shorter wavelength, which makes them appear brighter and create the characteristic blue color of the sky during daylight hours."
+    },
+    {
+      "prompt": "Напиши короткое поздравление с днём рождения для коллеги.",
+      "output": "Вот пример короткого поздравления на день рождения:\n\n\"Дорогой [имя],\n\nСегодня мы отмечаем ваш день рождения! Желаю вам сегодняшний праздник - особенный и заполненный радостью. Пусть этот день принесет вам новые удачи, успехов в работе и семейного счастья.\n\nБудьте здоровы, счастливы и всегда молодым духом!\n\nКоллега\"\n\nВы можете изменить имя и дополнительные детали под свои нужды."
+    }
+  ]
+}
