@@ -1,0 +1,311 @@
+(APIServer pid=113078) INFO 11-19 14:26:07 [utils.py:344] 
+(APIServer pid=113078) INFO 11-19 14:26:07 [utils.py:344]        █     █     █▄   ▄█
+(APIServer pid=113078) INFO 11-19 14:26:07 [utils.py:344]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.22.0
+(APIServer pid=113078) INFO 11-19 14:26:07 [utils.py:344]   █▄█▀ █     █     █     █  model   Qwen/Qwen3-8B
+(APIServer pid=113078) INFO 11-19 14:26:07 [utils.py:344]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=113078) INFO 11-19 14:26:07 [utils.py:344] 
+(APIServer pid=113078) INFO 11-19 14:26:07 [utils.py:278] non-default args: {'model_tag': 'Qwen/Qwen3-8B', 'model': 'Qwen/Qwen3-8B', 'quantization': 'fp8', 'speculative_config': {'method': 'eagle3', 'model': '/ephemeral/models/qwen3-8b-eagle3', 'num_speculative_tokens': 3}}
+(APIServer pid=113078) WARNING 11-19 14:26:07 [envs.py:2057] Unknown vLLM environment variable detected: VLLM_BUILD_URL
+(APIServer pid=113078) WARNING 11-19 14:26:07 [envs.py:2057] Unknown vLLM environment variable detected: VLLM_IMAGE_TAG
+(APIServer pid=113078) WARNING 11-19 14:26:07 [envs.py:2057] Unknown vLLM environment variable detected: VLLM_BUILD_PIPELINE
+(APIServer pid=113078) WARNING 11-19 14:26:07 [envs.py:2057] Unknown vLLM environment variable detected: VLLM_BUILD_COMMIT
+(APIServer pid=113078) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+(APIServer pid=113078) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(APIServer pid=113078) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(APIServer pid=113078) INFO 11-19 14:26:33 [model.py:617] Resolved architecture: Qwen3ForCausalLM
+(APIServer pid=113078) INFO 11-19 14:26:33 [model.py:1752] Using max model len 40960
+(APIServer pid=113078) [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+(APIServer pid=113078) INFO 11-19 14:26:51 [model.py:617] Resolved architecture: Eagle3LlamaForCausalLM
+(APIServer pid=113078) INFO 11-19 14:26:51 [model.py:1752] Using max model len 40960
+(APIServer pid=113078) INFO 11-19 14:26:51 [scheduler.py:239] Chunked prefill is enabled with max_num_batched_tokens=8192.
+(APIServer pid=113078) INFO 11-19 14:26:52 [vllm.py:977] Asynchronous scheduling is enabled.
+(APIServer pid=113078) INFO 11-19 14:26:52 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+<frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+<frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(EngineCore pid=114593) INFO 11-19 14:27:15 [core.py:112] Initializing a V1 LLM engine (v0.22.0) with config: model='Qwen/Qwen3-8B', speculative_config=SpeculativeConfig(method='eagle3', model='/ephemeral/models/qwen3-8b-eagle3', num_spec_tokens=3), tokenizer='Qwen/Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=40960, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=fp8, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=Qwen/Qwen3-8B, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::qwen_gdn_attention_core', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [8192], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=114593) INFO 11-19 14:27:15 [parallel_state.py:1422] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://10.119.94.61:44067 backend=nccl
+(EngineCore pid=114593) INFO 11-19 14:27:15 [parallel_state.py:1735] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=114593) INFO 11-19 14:27:15 [gpu_worker.py:289] Using V2 Model Runner
+(EngineCore pid=114593) INFO 11-19 14:27:16 [model_runner.py:274] Loading model from scratch...
+(EngineCore pid=114593) INFO 11-19 14:27:16 [__init__.py:557] Selected CutlassFP8ScaledMMLinearKernel for Fp8OnlineLinearMethod
+(EngineCore pid=114593) INFO 11-19 14:27:16 [deep_gemm.py:113] DeepGEMM E8M0 enabled on current platform.
+(EngineCore pid=114593) INFO 11-19 14:27:16 [cuda.py:378] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=114593) INFO 11-19 14:27:16 [flash_attn.py:636] Using FlashAttention version 3
+(EngineCore pid=114593) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+(EngineCore pid=114593) INFO 11-19 14:27:19 [weight_utils.py:922] Filesystem type for checkpoints: XFS. Checkpoint size: 15.26 GiB. Available RAM: 1796.95 GiB.
+(EngineCore pid=114593) INFO 11-19 14:27:19 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (XFS) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=114593) Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+(EngineCore pid=114593) Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.83it/s]
+(EngineCore pid=114593) Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:01,  1.76it/s]
+(EngineCore pid=114593) Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:01<00:01,  1.71it/s]
+(EngineCore pid=114593) Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:02<00:00,  1.85it/s]
+(EngineCore pid=114593) Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:02<00:00,  2.40it/s]
+(EngineCore pid=114593) Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:02<00:00,  2.08it/s]
+(EngineCore pid=114593) 
+(EngineCore pid=114593) INFO 11-19 14:27:21 [default_loader.py:397] Loading weights took 2.42 seconds
+(EngineCore pid=114593) INFO 11-19 14:27:21 [eagle3_utils.py:31] Using Eagle3 auxiliary layers from model: (2, 18, 33)
+(EngineCore pid=114593) INFO 11-19 14:27:21 [weight_utils.py:922] Filesystem type for checkpoints: XFS. Checkpoint size: 1.90 GiB. Available RAM: 1797.02 GiB.
+(EngineCore pid=114593) Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+(EngineCore pid=114593) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00, 2003.01it/s]
+(EngineCore pid=114593) 
+(EngineCore pid=114593) INFO 11-19 14:27:22 [default_loader.py:397] Loading weights took 0.36 seconds
+(EngineCore pid=114593) INFO 11-19 14:27:22 [model_runner.py:295] Model loading took 10.96 GiB and 6.720386 seconds
+(EngineCore pid=114593) INFO 11-19 14:27:33 [backends.py:1089] Using cache directory: /ephemeral/cache/vllm-gpu0/fp8_eagle3_k3/torch_compile_cache/539cb9512d/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=114593) INFO 11-19 14:27:33 [backends.py:1148] Dynamo bytecode transform time: 10.27 s
+(EngineCore pid=114593) INFO 11-19 14:27:36 [backends.py:378] Cache the graph of compile range (1, 8192) for later use
+(EngineCore pid=114593) INFO 11-19 14:27:42 [backends.py:393] Compiling a graph for compile range (1, 8192) takes 8.37 s
+(EngineCore pid=114593) INFO 11-19 14:27:47 [decorators.py:708] saved AOT compiled function to /ephemeral/cache/vllm-gpu0/fp8_eagle3_k3/torch_compile_cache/torch_aot_compile/f7bbaeb1a62e34936f702474b75ee67ee9c8b05b36ad41544dadac256727e55f/rank_0_0/model
+(EngineCore pid=114593) INFO 11-19 14:27:47 [monitor.py:53] torch.compile took 24.64 s in total
+(EngineCore pid=114593) INFO 11-19 14:27:48 [monitor.py:81] Initial profiling/warmup run took 0.38 s
+(EngineCore pid=114593) INFO 11-19 14:27:48 [backends.py:1089] Using cache directory: /ephemeral/cache/vllm-gpu0/fp8_eagle3_k3/torch_compile_cache/539cb9512d/rank_0_0/eagle_head for vLLM's torch.compile
+(EngineCore pid=114593) INFO 11-19 14:27:48 [backends.py:1148] Dynamo bytecode transform time: 0.40 s
+(EngineCore pid=114593) INFO 11-19 14:27:51 [backends.py:393] Compiling a graph for compile range (1, 8192) takes 2.42 s
+(EngineCore pid=114593) INFO 11-19 14:27:51 [decorators.py:708] saved AOT compiled function to /ephemeral/cache/vllm-gpu0/fp8_eagle3_k3/torch_compile_cache/torch_aot_compile/7cc7393a322b358fd687137a7daa5fbca9e86e8ff164e5e0d5f72f76d08c6d41/rank_0_0/model
+(EngineCore pid=114593) INFO 11-19 14:27:51 [monitor.py:53] torch.compile took 2.96 s in total
+(EngineCore pid=114593) INFO 11-19 14:27:51 [monitor.py:81] Initial profiling/warmup run took 0.24 s
+(EngineCore pid=114593) INFO 11-19 14:27:52 [gpu_worker.py:466] Available KV cache memory: 115.49 GiB
+(EngineCore pid=114593) INFO 11-19 14:27:52 [kv_cache_utils.py:1733] GPU KV cache size: 818,256 tokens
+(EngineCore pid=114593) INFO 11-19 14:27:52 [kv_cache_utils.py:1734] Maximum concurrency for 40,960 tokens per request: 19.98x
+(EngineCore pid=114593) 2026-11-19 14:27:52,263 - INFO - autotuner.py:615 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(EngineCore pid=114593) 2026-11-19 14:27:52,408 - INFO - autotuner.py:634 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(EngineCore pid=114593) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/49 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/49 [00:00<00:01, 37.37it/s]Capturing CUDA graphs (PIECEWISE):  16%|█▋        | 8/49 [00:00<00:01, 36.72it/s]Capturing CUDA graphs (PIECEWISE):  24%|██▍       | 12/49 [00:00<00:01, 36.41it/s]Capturing CUDA graphs (PIECEWISE):  33%|███▎      | 16/49 [00:00<00:00, 35.86it/s]Capturing CUDA graphs (PIECEWISE):  41%|████      | 20/49 [00:00<00:00, 36.43it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▉     | 24/49 [00:00<00:00, 37.10it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 28/49 [00:00<00:00, 37.83it/s]Capturing CUDA graphs (PIECEWISE):  65%|██████▌   | 32/49 [00:00<00:00, 38.11it/s]Capturing CUDA graphs (PIECEWISE):  73%|███████▎  | 36/49 [00:00<00:00, 37.72it/s]Capturing CUDA graphs (PIECEWISE):  82%|████████▏ | 40/49 [00:01<00:00, 37.66it/s]Capturing CUDA graphs (PIECEWISE):  90%|████████▉ | 44/49 [00:01<00:00, 37.51it/s]Capturing CUDA graphs (PIECEWISE):  98%|█████████▊| 48/49 [00:01<00:00, 37.70it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 49/49 [00:01<00:00, 37.36it/s]
+(EngineCore pid=114593) Capturing CUDA graphs (FULL):   0%|          | 0/49 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  10%|█         | 5/49 [00:00<00:01, 43.80it/s]Capturing CUDA graphs (FULL):  20%|██        | 10/49 [00:00<00:00, 43.70it/s]Capturing CUDA graphs (FULL):  31%|███       | 15/49 [00:00<00:00, 43.62it/s]Capturing CUDA graphs (FULL):  41%|████      | 20/49 [00:00<00:00, 44.67it/s]Capturing CUDA graphs (FULL):  51%|█████     | 25/49 [00:00<00:00, 45.23it/s]Capturing CUDA graphs (FULL):  61%|██████    | 30/49 [00:00<00:00, 45.81it/s]Capturing CUDA graphs (FULL):  71%|███████▏  | 35/49 [00:00<00:00, 45.69it/s]Capturing CUDA graphs (FULL):  82%|████████▏ | 40/49 [00:00<00:00, 45.63it/s]Capturing CUDA graphs (FULL):  92%|█████████▏| 45/49 [00:00<00:00, 45.93it/s]Capturing CUDA graphs (FULL): 100%|██████████| 49/49 [00:01<00:00, 45.58it/s]
+(EngineCore pid=114593) INFO 11-19 14:27:55 [speculator.py:423] Capturing model for Eagle speculator...
+(EngineCore pid=114593) Capturing eagle prefill CUDA graphs (PIECEWISE):   0%|          | 0/49 [00:00<?, ?it/s]Capturing eagle prefill CUDA graphs (PIECEWISE):  24%|██▍       | 12/49 [00:00<00:00, 108.87it/s]Capturing eagle prefill CUDA graphs (PIECEWISE):  49%|████▉     | 24/49 [00:00<00:00, 109.75it/s]Capturing eagle prefill CUDA graphs (PIECEWISE):  71%|███████▏  | 35/49 [00:00<00:00, 105.61it/s]Capturing eagle prefill CUDA graphs (PIECEWISE):  94%|█████████▍| 46/49 [00:00<00:00, 90.57it/s] Capturing eagle prefill CUDA graphs (PIECEWISE): 100%|██████████| 49/49 [00:00<00:00, 96.12it/s]
+(EngineCore pid=114593) Capturing eagle prefill CUDA graphs (FULL):   0%|          | 0/49 [00:00<?, ?it/s]Capturing eagle prefill CUDA graphs (FULL):  67%|██████▋   | 33/49 [00:00<00:00, 322.51it/s]Capturing eagle prefill CUDA graphs (FULL):  67%|██████▋   | 33/49 [00:13<00:00, 322.51it/s]Capturing eagle prefill CUDA graphs (FULL):  98%|█████████▊| 48/49 [00:23<00:00,  1.61it/s] Capturing eagle prefill CUDA graphs (FULL): 100%|██████████| 49/49 [00:23<00:00,  2.06it/s]
+(EngineCore pid=114593) Capturing eagle decode CUDA graphs (FULL):   0%|          | 0/49 [00:00<?, ?it/s]Capturing eagle decode CUDA graphs (FULL):  41%|████      | 20/49 [00:00<00:00, 194.12it/s]Capturing eagle decode CUDA graphs (FULL):  88%|████████▊ | 43/49 [00:00<00:00, 212.76it/s]Capturing eagle decode CUDA graphs (FULL): 100%|██████████| 49/49 [00:00<00:00, 216.86it/s]
+(EngineCore pid=114593) INFO 11-19 14:28:19 [model_runner.py:661] Graph capturing finished in 27 secs, took 1.40 GiB
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [384,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [388,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [392,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [396,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [400,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [404,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [408,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [412,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [64,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [68,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [72,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [76,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [80,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [84,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [88,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [92,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [0,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [4,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [8,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [12,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [16,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [20,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [24,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [28,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [480,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [484,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [488,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [492,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [496,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [500,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [504,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [508,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [352,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [356,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [360,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [364,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [368,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [372,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [376,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [96,0,0], thread: [380,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [352,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [356,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [360,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [364,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [368,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [372,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [376,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [380,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [416,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [420,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [424,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [428,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [432,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [436,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [440,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [444,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] EngineCore failed to start.
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] Traceback (most recent call last):
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1139, in run_engine_core
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     return func(*args, **kwargs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 905, in __init__
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     super().__init__(
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 131, in __init__
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     kv_cache_config = self._initialize_kv_caches(vllm_config)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     return func(*args, **kwargs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 286, in _initialize_kv_caches
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     self.model_executor.initialize_from_config(kv_cache_configs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/abstract.py", line 124, in initialize_from_config
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     compilation_times: list[CompilationTimes] = self.collective_rpc(
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]                                                 ^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/uniproc_executor.py", line 93, in collective_rpc
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     result = run_method(self.driver_worker, method, args, kwargs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/serial_utils.py", line 510, in run_method
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     return func(*args, **kwargs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     return func(*args, **kwargs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_worker.py", line 687, in compile_or_warm_up_model
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     warmup_kernels(self.model_runner, self.execute_model, self.sample_tokens)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     return func(*args, **kwargs)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu/warmup.py", line 153, in warmup_kernels
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     torch.accelerator.synchronize()
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]   File "/usr/local/lib/python3.12/dist-packages/torch/accelerator/__init__.py", line 263, in synchronize
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165]     torch._C._accelerator_synchronizeDevice(device_index)
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] torch.AcceleratorError: CUDA error: device-side assert triggered
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+(EngineCore pid=114593) ERROR 11-19 14:28:20 [core.py:1165] 
+(EngineCore pid=114593) Process EngineCore:
+(EngineCore pid=114593) Traceback (most recent call last):
+(EngineCore pid=114593)   File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+(EngineCore pid=114593)     self.run()
+(EngineCore pid=114593)   File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+(EngineCore pid=114593)     self._target(*self._args, **self._kwargs)
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1169, in run_engine_core
+(EngineCore pid=114593)     raise e
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1139, in run_engine_core
+(EngineCore pid=114593)     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=114593)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=114593)     return func(*args, **kwargs)
+(EngineCore pid=114593)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 905, in __init__
+(EngineCore pid=114593)     super().__init__(
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 131, in __init__
+(EngineCore pid=114593)     kv_cache_config = self._initialize_kv_caches(vllm_config)
+(EngineCore pid=114593)                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=114593)     return func(*args, **kwargs)
+(EngineCore pid=114593)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 286, in _initialize_kv_caches
+(EngineCore pid=114593)     self.model_executor.initialize_from_config(kv_cache_configs)
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/abstract.py", line 124, in initialize_from_config
+(EngineCore pid=114593)     compilation_times: list[CompilationTimes] = self.collective_rpc(
+(EngineCore pid=114593)                                                 ^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/uniproc_executor.py", line 93, in collective_rpc
+(EngineCore pid=114593)     result = run_method(self.driver_worker, method, args, kwargs)
+(EngineCore pid=114593)              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/serial_utils.py", line 510, in run_method
+(EngineCore pid=114593)     return func(*args, **kwargs)
+(EngineCore pid=114593)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=114593)     return func(*args, **kwargs)
+(EngineCore pid=114593)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_worker.py", line 687, in compile_or_warm_up_model
+(EngineCore pid=114593)     warmup_kernels(self.model_runner, self.execute_model, self.sample_tokens)
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+(EngineCore pid=114593)     return func(*args, **kwargs)
+(EngineCore pid=114593)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu/warmup.py", line 153, in warmup_kernels
+(EngineCore pid=114593)     torch.accelerator.synchronize()
+(EngineCore pid=114593)   File "/usr/local/lib/python3.12/dist-packages/torch/accelerator/__init__.py", line 263, in synchronize
+(EngineCore pid=114593)     torch._C._accelerator_synchronizeDevice(device_index)
+(EngineCore pid=114593) torch.AcceleratorError: CUDA error: device-side assert triggered
+(EngineCore pid=114593) Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+(EngineCore pid=114593) CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+(EngineCore pid=114593) For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+(EngineCore pid=114593) Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+(EngineCore pid=114593) 
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [384,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [388,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [392,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [396,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [400,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [404,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [408,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [412,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [480,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [484,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [488,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [492,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [496,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [500,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [504,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+/ephemeral/cache/vllm-gpu3/torch_compile_cache/torch_aot_compile/88ba772fdfb1b043d20dbbaf8946ff63647d024fbe066fd0230229662a19b075/inductor_cache/u5/cu523gkbzjpsvfni55vf3mwsnlor42cpiirk4xadvq2wzdgyukvd.py:49: unknown: block: [47,0,0], thread: [508,0,0] Assertion `index out of bounds: 0 <= tmp5 < 151936` failed.
+[rank0]:[W1119 14:28:21.110637307 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+(APIServer pid=113078) Traceback (most recent call last):
+(APIServer pid=113078)   File "/usr/local/bin/vllm", line 10, in <module>
+(APIServer pid=113078)     sys.exit(main())
+(APIServer pid=113078)              ^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/cli/main.py", line 92, in main
+(APIServer pid=113078)     args.dispatch_function(args)
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/cli/serve.py", line 148, in cmd
+(APIServer pid=113078)     uvloop.run(run_server(args))
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=113078)     return __asyncio.run(
+(APIServer pid=113078)            ^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=113078)     return runner.run(main)
+(APIServer pid=113078)            ^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=113078)     return self._loop.run_until_complete(task)
+(APIServer pid=113078)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=113078)     return await main
+(APIServer pid=113078)            ^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py", line 678, in run_server
+(APIServer pid=113078)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py", line 692, in run_server_worker
+(APIServer pid=113078)     async with build_async_engine_client(
+(APIServer pid=113078)                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=113078)     return await anext(self.gen)
+(APIServer pid=113078)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+(APIServer pid=113078)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=113078)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=113078)     return await anext(self.gen)
+(APIServer pid=113078)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/openai/api_server.py", line 136, in build_async_engine_client_from_engine_args
+(APIServer pid=113078)     async_llm = AsyncLLM.from_vllm_config(
+(APIServer pid=113078)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/async_llm.py", line 217, in from_vllm_config
+(APIServer pid=113078)     return cls(
+(APIServer pid=113078)            ^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/async_llm.py", line 146, in __init__
+(APIServer pid=113078)     self.engine_core = EngineCoreClient.make_async_mp_client(
+(APIServer pid=113078)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=113078)     return func(*args, **kwargs)
+(APIServer pid=113078)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py", line 131, in make_async_mp_client
+(APIServer pid=113078)     return AsyncMPClient(*client_args)
+(APIServer pid=113078)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=113078)     return func(*args, **kwargs)
+(APIServer pid=113078)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py", line 932, in __init__
+(APIServer pid=113078)     super().__init__(
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py", line 567, in __init__
+(APIServer pid=113078)     with launch_core_engines(
+(APIServer pid=113078)          ^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=113078)   File "/usr/lib/python3.12/contextlib.py", line 144, in __exit__
+(APIServer pid=113078)     next(self.gen)
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py", line 1150, in launch_core_engines
+(APIServer pid=113078)     wait_for_engine_startup(
+(APIServer pid=113078)   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py", line 1209, in wait_for_engine_startup
+(APIServer pid=113078)     raise RuntimeError(
+(APIServer pid=113078) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}

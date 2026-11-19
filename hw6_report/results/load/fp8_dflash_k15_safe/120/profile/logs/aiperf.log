@@ -1,0 +1,734 @@
+2026-11-19 16:11:08.619 - aiperf.cli_runner._single_run - INFO - Starting AIPerf System
+2026-11-19 16:11:08.625 - aiperf.config.resolution.resolvers - INFO - [OK] Tokenizer Qwen/Qwen3-8B detected
+2026-11-19 16:11:08.625 - aiperf.config.resolution.resolvers - INFO - 1 tokenizer validated | 0.0s
+2026-11-19 16:11:08.625 - aiperf.config.resolution.resolvers - INFO - HF cache hit (skipping prefetch): ['Qwen/Qwen3-8B']
+2026-11-19 16:11:08.901 - GPUTelemetryJSONLWriter_20156460 - INFO - GPU telemetry export enabled: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/gpu_telemetry_export.jsonl
+2026-11-19 16:11:08.907 - OTelMetricsResultsProcessor_80bbdab8 - INFO - Telemetry streaming is disabled (set --otel-url and/or --mlflow-tracking-uri to enable)
+2026-11-19 16:11:08.907 - RecordExportJSONLWriter_72f4b690 - INFO - Record metrics export enabled: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/profile_export.jsonl
+2026-11-19 16:11:08.911 - _ServiceRegistry - INFO - Registered: Worker_Manager ('worker_manager') [0/0]
+2026-11-19 16:11:08.911 - system_controller - INFO - Registered Worker Manager (id: 'worker_manager')
+2026-11-19 16:11:08.911 - system_controller - INFO - Registered Worker Manager (id: 'worker_manager')
+2026-11-19 16:11:08.939 - server_metrics_manager - INFO - Server Metrics: Discovered 1 endpoints: ['http://localhost:8002/metrics']
+2026-11-19 16:11:08.985 - _ServiceRegistry - INFO - Registered: Gpu_Telemetry_Manager ('gpu_telemetry_manager') [0/0]
+2026-11-19 16:11:08.986 - system_controller - INFO - Registered Gpu Telemetry Manager (id: 'gpu_telemetry_manager')
+2026-11-19 16:11:08.986 - system_controller - INFO - Registered Gpu Telemetry Manager (id: 'gpu_telemetry_manager')
+2026-11-19 16:11:08.986 - _ServiceRegistry - INFO - Registered: Dataset_Manager ('dataset_manager') [0/0]
+2026-11-19 16:11:08.986 - system_controller - INFO - Registered Dataset Manager (id: 'dataset_manager')
+2026-11-19 16:11:08.986 - _ServiceRegistry - INFO - Registered: Server_Metrics_Manager ('server_metrics_manager') [0/0]
+2026-11-19 16:11:08.986 - system_controller - INFO - Registered Server Metrics Manager (id: 'server_metrics_manager')
+2026-11-19 16:11:08.987 - _ServiceRegistry - INFO - Registered: Records_Manager ('records_manager') [0/0]
+2026-11-19 16:11:08.987 - system_controller - INFO - Registered Records Manager (id: 'records_manager')
+2026-11-19 16:11:08.987 - OutputsJsonRecordProcessor_798d20d3 - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_182ea7bf.jsonl
+2026-11-19 16:11:08.989 - OutputsJsonRecordProcessor_64b28e86 - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_d331bc10.jsonl
+2026-11-19 16:11:08.990 - OutputsJsonRecordProcessor_c88b07c8 - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_db3019df.jsonl
+2026-11-19 16:11:08.991 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_182ea7bf') [0/0]
+2026-11-19 16:11:08.991 - system_controller - INFO - Registered Record Processor (id: 'record_processor_182ea7bf')
+2026-11-19 16:11:08.991 - system_controller - INFO - Registered Record Processor (id: 'record_processor_182ea7bf')
+2026-11-19 16:11:08.992 - OutputsJsonRecordProcessor_56989ec3 - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_eef5b6bc.jsonl
+2026-11-19 16:11:08.993 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_d331bc10') [0/0]
+2026-11-19 16:11:08.993 - system_controller - INFO - Registered Record Processor (id: 'record_processor_d331bc10')
+2026-11-19 16:11:08.993 - system_controller - INFO - Registered Record Processor (id: 'record_processor_d331bc10')
+2026-11-19 16:11:08.994 - OutputsJsonRecordProcessor_2485384d - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_09102729.jsonl
+2026-11-19 16:11:08.994 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_db3019df') [0/0]
+2026-11-19 16:11:08.994 - system_controller - INFO - Registered Record Processor (id: 'record_processor_db3019df')
+2026-11-19 16:11:08.994 - system_controller - INFO - Registered Record Processor (id: 'record_processor_db3019df')
+2026-11-19 16:11:08.996 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_eef5b6bc') [0/0]
+2026-11-19 16:11:08.996 - system_controller - INFO - Registered Record Processor (id: 'record_processor_eef5b6bc')
+2026-11-19 16:11:08.996 - system_controller - INFO - Registered Record Processor (id: 'record_processor_eef5b6bc')
+2026-11-19 16:11:08.996 - OutputsJsonRecordProcessor_ed027cac - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_cf4d8851.jsonl
+2026-11-19 16:11:08.998 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_09102729') [0/0]
+2026-11-19 16:11:08.998 - system_controller - INFO - Registered Record Processor (id: 'record_processor_09102729')
+2026-11-19 16:11:08.998 - system_controller - INFO - Registered Record Processor (id: 'record_processor_09102729')
+2026-11-19 16:11:08.998 - OutputsJsonRecordProcessor_bf7a5b27 - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_bacd090e.jsonl
+2026-11-19 16:11:09.000 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_cf4d8851') [0/0]
+2026-11-19 16:11:09.000 - OutputsJsonRecordProcessor_17e10721 - INFO - OutputsJsonRecordProcessor initialized: /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/output_fragments/output_fragments_record_processor_800f7cf6.jsonl
+2026-11-19 16:11:09.000 - system_controller - INFO - Registered Record Processor (id: 'record_processor_cf4d8851')
+2026-11-19 16:11:09.000 - system_controller - INFO - Registered Record Processor (id: 'record_processor_cf4d8851')
+2026-11-19 16:11:09.002 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_bacd090e') [0/0]
+2026-11-19 16:11:09.002 - system_controller - INFO - Registered Record Processor (id: 'record_processor_bacd090e')
+2026-11-19 16:11:09.002 - system_controller - INFO - Registered Record Processor (id: 'record_processor_bacd090e')
+2026-11-19 16:11:09.004 - _ServiceRegistry - INFO - Registered: Record_Processor ('record_processor_800f7cf6') [0/0]
+2026-11-19 16:11:09.004 - system_controller - INFO - Registered Record Processor (id: 'record_processor_800f7cf6')
+2026-11-19 16:11:09.004 - system_controller - INFO - Registered Record Processor (id: 'record_processor_800f7cf6')
+2026-11-19 16:11:09.005 - system_controller - INFO - Registered Dataset Manager (id: 'dataset_manager')
+2026-11-19 16:11:09.029 - system_controller - INFO - Registered Records Manager (id: 'records_manager')
+2026-11-19 16:11:09.039 - _ServiceRegistry - INFO - Registered: Worker ('worker_2f24c5a8') [0/0]
+2026-11-19 16:11:09.039 - system_controller - INFO - Registered Worker (id: 'worker_2f24c5a8')
+2026-11-19 16:11:09.039 - system_controller - INFO - Registered Worker (id: 'worker_2f24c5a8')
+2026-11-19 16:11:09.040 - _ServiceRegistry - INFO - Registered: Timing_Manager ('timing_manager') [0/0]
+2026-11-19 16:11:09.040 - system_controller - INFO - Registered Timing Manager (id: 'timing_manager')
+2026-11-19 16:11:09.040 - system_controller - INFO - Registered Timing Manager (id: 'timing_manager')
+2026-11-19 16:11:09.047 - _ServiceRegistry - INFO - Registered: Worker ('worker_944ce686') [0/0]
+2026-11-19 16:11:09.047 - system_controller - INFO - Registered Worker (id: 'worker_944ce686')
+2026-11-19 16:11:09.047 - system_controller - INFO - Registered Worker (id: 'worker_944ce686')
+2026-11-19 16:11:09.049 - _ServiceRegistry - INFO - Registered: Worker ('worker_e8014607') [0/0]
+2026-11-19 16:11:09.049 - system_controller - INFO - Registered Worker (id: 'worker_e8014607')
+2026-11-19 16:11:09.049 - system_controller - INFO - Registered Worker (id: 'worker_e8014607')
+2026-11-19 16:11:09.052 - _ServiceRegistry - INFO - Registered: Worker ('worker_3fcb2520') [0/0]
+2026-11-19 16:11:09.052 - system_controller - INFO - Registered Worker (id: 'worker_3fcb2520')
+2026-11-19 16:11:09.052 - system_controller - INFO - Registered Worker (id: 'worker_3fcb2520')
+2026-11-19 16:11:09.058 - _ServiceRegistry - INFO - Registered: Worker ('worker_80823af1') [0/0]
+2026-11-19 16:11:09.058 - system_controller - INFO - Registered Worker (id: 'worker_80823af1')
+2026-11-19 16:11:09.058 - system_controller - INFO - Registered Worker (id: 'worker_80823af1')
+2026-11-19 16:11:09.058 - _ServiceRegistry - INFO - Registered: Worker ('worker_26589004') [0/0]
+2026-11-19 16:11:09.058 - system_controller - INFO - Registered Worker (id: 'worker_26589004')
+2026-11-19 16:11:09.058 - system_controller - INFO - Registered Worker (id: 'worker_26589004')
+2026-11-19 16:11:09.060 - system_controller - INFO - Registered Server Metrics Manager (id: 'server_metrics_manager')
+2026-11-19 16:11:09.065 - _ServiceRegistry - INFO - Registered: Worker ('worker_1515a4f6') [0/0]
+2026-11-19 16:11:09.065 - system_controller - INFO - Registered Worker (id: 'worker_1515a4f6')
+2026-11-19 16:11:09.065 - system_controller - INFO - Registered Worker (id: 'worker_1515a4f6')
+2026-11-19 16:11:09.066 - _ServiceRegistry - INFO - Registered: Worker ('worker_add04114') [0/0]
+2026-11-19 16:11:09.066 - system_controller - INFO - Registered Worker (id: 'worker_add04114')
+2026-11-19 16:11:09.066 - system_controller - INFO - Registered Worker (id: 'worker_add04114')
+2026-11-19 16:11:09.068 - _ServiceRegistry - INFO - Registered: Worker ('worker_afdfabb7') [0/0]
+2026-11-19 16:11:09.068 - system_controller - INFO - Registered Worker (id: 'worker_afdfabb7')
+2026-11-19 16:11:09.068 - system_controller - INFO - Registered Worker (id: 'worker_afdfabb7')
+2026-11-19 16:11:09.069 - _ServiceRegistry - INFO - Registered: Worker ('worker_c6519008') [0/0]
+2026-11-19 16:11:09.069 - system_controller - INFO - Registered Worker (id: 'worker_c6519008')
+2026-11-19 16:11:09.069 - system_controller - INFO - Registered Worker (id: 'worker_c6519008')
+2026-11-19 16:11:09.070 - _ServiceRegistry - INFO - Registered: Worker ('worker_07a6b243') [0/0]
+2026-11-19 16:11:09.070 - system_controller - INFO - Registered Worker (id: 'worker_07a6b243')
+2026-11-19 16:11:09.070 - system_controller - INFO - Registered Worker (id: 'worker_07a6b243')
+2026-11-19 16:11:09.087 - _ServiceRegistry - INFO - Registered: Worker ('worker_4845ffb6') [0/0]
+2026-11-19 16:11:09.088 - system_controller - INFO - Registered Worker (id: 'worker_4845ffb6')
+2026-11-19 16:11:09.088 - system_controller - INFO - Registered Worker (id: 'worker_4845ffb6')
+2026-11-19 16:11:09.089 - _ServiceRegistry - INFO - Registered: Worker ('worker_d392b7ca') [0/0]
+2026-11-19 16:11:09.089 - system_controller - INFO - Registered Worker (id: 'worker_d392b7ca')
+2026-11-19 16:11:09.089 - _ServiceRegistry - INFO - Registered: Worker ('worker_5012e9b2') [0/0]
+2026-11-19 16:11:09.089 - system_controller - INFO - Registered Worker (id: 'worker_5012e9b2')
+2026-11-19 16:11:09.089 - _ServiceRegistry - INFO - Registered: Worker ('worker_e002b55c') [0/0]
+2026-11-19 16:11:09.089 - system_controller - INFO - Registered Worker (id: 'worker_e002b55c')
+2026-11-19 16:11:09.089 - _ServiceRegistry - INFO - Registered: Worker ('worker_0e134f68') [0/0]
+2026-11-19 16:11:09.089 - system_controller - INFO - Registered Worker (id: 'worker_0e134f68')
+2026-11-19 16:11:09.098 - _ServiceRegistry - INFO - Registered: Worker ('worker_17f58511') [0/0]
+2026-11-19 16:11:09.098 - system_controller - INFO - Registered Worker (id: 'worker_17f58511')
+2026-11-19 16:11:09.098 - system_controller - INFO - Registered Worker (id: 'worker_17f58511')
+2026-11-19 16:11:09.101 - _ServiceRegistry - INFO - Registered: Worker ('worker_b9e55563') [0/0]
+2026-11-19 16:11:09.101 - system_controller - INFO - Registered Worker (id: 'worker_b9e55563')
+2026-11-19 16:11:09.102 - system_controller - INFO - Registered Worker (id: 'worker_b9e55563')
+2026-11-19 16:11:09.102 - _ServiceRegistry - INFO - Registered: Worker ('worker_2be4f386') [0/0]
+2026-11-19 16:11:09.102 - system_controller - INFO - Registered Worker (id: 'worker_2be4f386')
+2026-11-19 16:11:09.102 - system_controller - INFO - Registered Worker (id: 'worker_2be4f386')
+2026-11-19 16:11:09.104 - _ServiceRegistry - INFO - Registered: Worker ('worker_ab5849ac') [0/0]
+2026-11-19 16:11:09.104 - system_controller - INFO - Registered Worker (id: 'worker_ab5849ac')
+2026-11-19 16:11:09.104 - system_controller - INFO - Registered Worker (id: 'worker_ab5849ac')
+2026-11-19 16:11:09.106 - _ServiceRegistry - INFO - Registered: Worker ('worker_5dc6cb2f') [0/0]
+2026-11-19 16:11:09.106 - system_controller - INFO - Registered Worker (id: 'worker_5dc6cb2f')
+2026-11-19 16:11:09.106 - system_controller - INFO - Registered Worker (id: 'worker_5dc6cb2f')
+2026-11-19 16:11:09.108 - _ServiceRegistry - INFO - Registered: Worker ('worker_1be7cce6') [0/0]
+2026-11-19 16:11:09.108 - system_controller - INFO - Registered Worker (id: 'worker_1be7cce6')
+2026-11-19 16:11:09.108 - system_controller - INFO - Registered Worker (id: 'worker_1be7cce6')
+2026-11-19 16:11:09.111 - _ServiceRegistry - INFO - Registered: Worker ('worker_a4e11b90') [0/0]
+2026-11-19 16:11:09.111 - system_controller - INFO - Registered Worker (id: 'worker_a4e11b90')
+2026-11-19 16:11:09.111 - system_controller - INFO - Registered Worker (id: 'worker_a4e11b90')
+2026-11-19 16:11:09.112 - _ServiceRegistry - INFO - Registered: Worker ('worker_ea16d1d7') [0/0]
+2026-11-19 16:11:09.112 - system_controller - INFO - Registered Worker (id: 'worker_ea16d1d7')
+2026-11-19 16:11:09.119 - _ServiceRegistry - INFO - Registered: Worker ('worker_835a2348') [0/0]
+2026-11-19 16:11:09.119 - system_controller - INFO - Registered Worker (id: 'worker_835a2348')
+2026-11-19 16:11:09.119 - _ServiceRegistry - INFO - Registered: Worker ('worker_7ecde982') [0/0]
+2026-11-19 16:11:09.119 - system_controller - INFO - Registered Worker (id: 'worker_7ecde982')
+2026-11-19 16:11:09.119 - _ServiceRegistry - INFO - Registered: Worker ('worker_8484809c') [0/0]
+2026-11-19 16:11:09.119 - system_controller - INFO - Registered Worker (id: 'worker_8484809c')
+2026-11-19 16:11:09.119 - system_controller - INFO - Registered Worker (id: 'worker_7ecde982')
+2026-11-19 16:11:09.119 - _ServiceRegistry - INFO - Registered: Worker ('worker_ed10acbc') [0/0]
+2026-11-19 16:11:09.119 - system_controller - INFO - Registered Worker (id: 'worker_ed10acbc')
+2026-11-19 16:11:09.119 - system_controller - INFO - Registered Worker (id: 'worker_835a2348')
+2026-11-19 16:11:09.120 - _ServiceRegistry - INFO - Registered: Worker ('worker_c594432c') [0/0]
+2026-11-19 16:11:09.120 - system_controller - INFO - Registered Worker (id: 'worker_c594432c')
+2026-11-19 16:11:09.120 - _ServiceRegistry - INFO - Registered: Worker ('worker_3279c31d') [0/0]
+2026-11-19 16:11:09.120 - system_controller - INFO - Registered Worker (id: 'worker_3279c31d')
+2026-11-19 16:11:09.120 - system_controller - INFO - Registered Worker (id: 'worker_3279c31d')
+2026-11-19 16:11:09.124 - _ServiceRegistry - INFO - Registered: Worker ('worker_01cd2850') [0/0]
+2026-11-19 16:11:09.124 - system_controller - INFO - Registered Worker (id: 'worker_01cd2850')
+2026-11-19 16:11:09.124 - system_controller - INFO - Registered Worker (id: 'worker_01cd2850')
+2026-11-19 16:11:09.127 - _ServiceRegistry - INFO - Registered: Worker ('worker_e37153f7') [0/0]
+2026-11-19 16:11:09.127 - system_controller - INFO - Registered Worker (id: 'worker_e37153f7')
+2026-11-19 16:11:09.127 - system_controller - INFO - Registered Worker (id: 'worker_e37153f7')
+2026-11-19 16:11:09.178 - system_controller - INFO - Registered Worker (id: 'worker_d392b7ca')
+2026-11-19 16:11:09.180 - system_controller - INFO - Registered Worker (id: 'worker_e002b55c')
+2026-11-19 16:11:09.181 - system_controller - INFO - Registered Worker (id: 'worker_0e134f68')
+2026-11-19 16:11:09.189 - system_controller - INFO - Registered Worker (id: 'worker_5012e9b2')
+2026-11-19 16:11:09.192 - system_controller - INFO - Registered Worker (id: 'worker_ea16d1d7')
+2026-11-19 16:11:09.219 - system_controller - INFO - Registered Worker (id: 'worker_8484809c')
+2026-11-19 16:11:09.219 - system_controller - INFO - Registered Worker (id: 'worker_c594432c')
+2026-11-19 16:11:09.389 - system_controller - INFO - System state: initializing -> configuring
+2026-11-19 16:11:09.389 - system_controller - INFO - AIPerf System is CONFIGURING
+2026-11-19 16:11:09.389 - system_controller - INFO - Configuring all services to start profiling
+2026-11-19 16:11:09.390 - InferenceResultParser_f4025d7c - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.390 - server_metrics_manager - INFO - Server Metrics: Running Kubernetes endpoint discovery...
+2026-11-19 16:11:09.390 - InferenceResultParser_1f7e7be9 - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.390 - InferenceResultParser_55f89b27 - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.390 - InferenceResultParser_e3e69a96 - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.390 - InferenceResultParser_1832eca7 - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.390 - InferenceResultParser_aa920b42 - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.390 - InferenceResultParser_f6c62b90 - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.390 - timing_manager - INFO - Waiting for dataset to be configured before configuring timing
+2026-11-19 16:11:09.390 - InferenceResultParser_cd1d6f26 - INFO - Configuring tokenizers for inference result parser (resolve_alias: True)
+2026-11-19 16:11:09.405 - gpu_telemetry_manager - WARNING - GPU Telemetry: http://localhost:9400/metrics is not reachable
+2026-11-19 16:11:09.406 - gpu_telemetry_manager - WARNING - GPU Telemetry: http://localhost:9401/metrics is not reachable
+2026-11-19 16:11:09.406 - system_controller - INFO - DCGM telemetry skipped: no telemetry sources reachable
+2026-11-19 16:11:09.456 - dataset_manager - INFO - Memory-mapped dataset cache HIT (key=3f08c42ee0bc35e7f9c451977d63df09); skipping tokenizer + composer.
+2026-11-19 16:11:09.456 - aiperf.dataset.mmap_cache - INFO - Restored mmap cache file dataset.dat via hardlink in 0.000s (0.00 GiB)
+2026-11-19 16:11:09.456 - aiperf.dataset.mmap_cache - INFO - Restored mmap cache file index.dat via hardlink in 0.000s (0.00 GiB)
+2026-11-19 16:11:09.456 - aiperf.dataset.mmap_cache - INFO - Restored mmap cache files in 0.000s via dataset=hardlink index=hardlink (dataset=0.00 GiB, index=0.00 GiB)
+2026-11-19 16:11:09.461 - dataset_manager - INFO - sampling strategy: sequential, unique conversations: 640, unique turn count: 640
+2026-11-19 16:11:09.475 - PhaseOrchestrator_4b70dd7c - INFO - Initialized 2 phase(s): ['Warmup', 'Profiling']
+2026-11-19 16:11:09.538 - dataset_manager - INFO - Dataset client initialized and freed 0 conversations from memory
+2026-11-19 16:11:10.734 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:10.748 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:10.755 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:10.765 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:10.767 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:10.773 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:10.799 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:10.810 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/revision/main "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.030 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.049 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.064 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.074 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.078 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.098 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.105 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.112 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-19 16:11:11.344 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.356 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.364 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.394 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.398 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.413 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.428 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:11.435 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.041 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.043 - InferenceResultParser_1f7e7be9 - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.65 seconds
+2026-11-19 16:11:12.054 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.056 - InferenceResultParser_55f89b27 - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.67 seconds
+2026-11-19 16:11:12.083 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.085 - InferenceResultParser_aa920b42 - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.69 seconds
+2026-11-19 16:11:12.144 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.146 - InferenceResultParser_f4025d7c - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.76 seconds
+2026-11-19 16:11:12.157 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.158 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.159 - InferenceResultParser_e3e69a96 - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.77 seconds
+2026-11-19 16:11:12.163 - InferenceResultParser_f6c62b90 - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.77 seconds
+2026-11-19 16:11:12.177 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.177 - httpx - INFO - HTTP Request: GET http://huggingface.proxy/api/models/Qwen/Qwen3-8B "HTTP/1.1 200 OK"
+2026-11-19 16:11:12.179 - InferenceResultParser_cd1d6f26 - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.79 seconds
+2026-11-19 16:11:12.183 - InferenceResultParser_1832eca7 - INFO - Initialized tokenizers: {'Qwen/Qwen3-8B': {'class': 'Qwen2Tokenizer', 'name_or_path': 'Qwen/Qwen3-8B'}} in 2.79 seconds
+2026-11-19 16:11:39.590 - server_metrics_manager - WARNING - Server Metrics: Kubernetes discovery timed out after 30.0s; continuing with configured endpoints only (tune server_metrics.discovery.timeout_seconds)
+2026-11-19 16:11:39.599 - server_metrics_manager - INFO - Server Metrics: Capturing baseline metrics...
+2026-11-19 16:11:39.616 - http://localhost:8002/metrics - INFO - Skipping unsupported summary metric: http_request_size_bytes
+2026-11-19 16:11:39.616 - http://localhost:8002/metrics - INFO - Skipping unsupported summary metric: http_response_size_bytes
+2026-11-19 16:11:39.617 - system_controller - INFO - All services configured in 30.23 seconds
+2026-11-19 16:11:39.617 - system_controller - INFO - System state: configuring -> ready
+2026-11-19 16:11:39.618 - system_controller - INFO - AIPerf System is CONFIGURED
+2026-11-19 16:11:39.618 - system_controller - INFO - Server metrics enabled - 1/1 endpoint(s) reachable.
+2026-11-19 16:11:39.619 - server_metrics_manager - INFO - Server Metrics: Started 1 collector(s) successfully
+2026-11-19 16:11:39.620 - system_controller - INFO - All services started profiling successfully
+2026-11-19 16:11:39.620 - system_controller - INFO - System state: ready -> profiling
+2026-11-19 16:11:39.620 - system_controller - INFO - AIPerf System is PROFILING
+2026-11-19 16:11:39.620 - system_controller - INFO - Waiting for result domains: profile, server_metrics
+2026-11-19 16:11:39.621 - RateTiming - INFO - Creating interval generator: pattern=constant, rate=2.0, smoothness=None
+2026-11-19 16:11:39.622 - PhaseRunner - NOTICE - Phase warmup (warmup) started | phase_index=0 | target: 40 requests
+2026-11-19 16:11:39.622 - RateTiming - INFO - Rate loop pacing via timerfd (kernel hrtimer)
+2026-11-19 16:11:39.622 - records_manager - INFO - Credit phase start: warmup
+2026-11-19 16:11:40.999 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 382 tokens (requested 512, diff -25.4%)
+2026-11-19 16:11:41.000 - records_manager - WARNING - Token usage is reported but no prompt-cache read tokens were seen (usage.prompt_tokens_details.cached_tokens absent). If your server uses prefix/KV caching, enable cache reporting so AIPerf can populate the prompt-cache metrics: vLLM --enable-prompt-tokens-details, SGLang --enable-cache-report (TRT-LLM reports it by default).
+2026-11-19 16:11:41.000 - MetricsAccumulator_1eb4739f - WARNING - Token usage is reported but no prompt-cache read tokens were seen (usage.prompt_tokens_details.cached_tokens absent). If your server uses prefix/KV caching, enable cache reporting so AIPerf can populate the prompt-cache metrics: vLLM --enable-prompt-tokens-details, SGLang --enable-cache-report (TRT-LLM reports it by default).
+2026-11-19 16:11:41.946 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 263 tokens (requested 512, diff -48.6%)
+2026-11-19 16:11:41.967 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 98 tokens (requested 512, diff -80.9%)
+2026-11-19 16:11:42.967 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 103 tokens (requested 512, diff -79.9%)
+2026-11-19 16:11:44.785 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 68 tokens (requested 512, diff -86.7%)
+2026-11-19 16:11:46.767 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 61 tokens (requested 512, diff -88.1%)
+2026-11-19 16:11:46.903 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 208 tokens (requested 512, diff -59.4%)
+2026-11-19 16:11:47.491 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 186 tokens (requested 512, diff -63.7%)
+2026-11-19 16:11:47.861 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 116 tokens (requested 512, diff -77.3%)
+2026-11-19 16:11:50.374 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 307 tokens (requested 512, diff -40.0%)
+2026-11-19 16:11:53.367 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 97 tokens (requested 512, diff -81.1%)
+2026-11-19 16:11:55.250 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 384 tokens (requested 512, diff -25.0%)
+2026-11-19 16:11:55.745 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 449 tokens (requested 512, diff -12.3%)
+2026-11-19 16:11:56.579 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 391 tokens (requested 512, diff -23.6%)
+2026-11-19 16:11:57.433 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 347 tokens (requested 512, diff -32.2%)
+2026-11-19 16:11:59.622 - PhaseRunner - NOTICE - Phase warmup (warmup) sending complete | sent=40, completed=37, in_flight=3 | sessions: sent=40, completed=37
+2026-11-19 16:12:00.401 - PhaseRunner - NOTICE - Phase warmup (warmup) complete | completed=40, cancelled=0, errors=0 | sessions: completed=40, cancelled=0 | elapsed=20.78s
+2026-11-19 16:12:00.402 - server_metrics_manager - INFO - Server Metrics: Warmup complete, capturing final warmup metrics...
+2026-11-19 16:12:00.402 - RateTiming - INFO - Creating interval generator: pattern=constant, rate=2.0, smoothness=None
+2026-11-19 16:12:00.402 - PhaseRunner - NOTICE - Phase profiling (profiling) started | phase_index=1 | profiling_index=0 | target: 300.0s duration
+2026-11-19 16:12:00.402 - PhaseRunner - INFO - Waiting for event 'profiling phase sending' with timeout of 299.999842273s
+2026-11-19 16:12:00.402 - records_manager - INFO - Credit phase start: profiling
+2026-11-19 16:12:00.402 - RateTiming - INFO - Rate loop pacing via timerfd (kernel hrtimer)
+2026-11-19 16:12:00.443 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.01
+2026-11-19 16:12:01.641 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 269 tokens (requested 512, diff -47.5%)
+2026-11-19 16:12:01.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.08
+2026-11-19 16:12:01.962 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 176 tokens (requested 512, diff -65.6%)
+2026-11-19 16:12:02.077 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 69 tokens (requested 512, diff -86.5%)
+2026-11-19 16:12:02.971 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.18
+2026-11-19 16:12:03.048 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 373 tokens (requested 512, diff -27.1%)
+2026-11-19 16:12:03.510 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 32 tokens (requested 512, diff -93.8%)
+2026-11-19 16:12:04.303 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.28
+2026-11-19 16:12:04.844 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 178 tokens (requested 512, diff -65.2%)
+2026-11-19 16:12:05.635 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.38
+2026-11-19 16:12:06.637 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.47
+2026-11-19 16:12:07.007 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 409 tokens (requested 512, diff -20.1%)
+2026-11-19 16:12:07.301 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 272 tokens (requested 512, diff -46.9%)
+2026-11-19 16:12:07.869 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 392 tokens (requested 512, diff -23.4%)
+2026-11-19 16:12:07.969 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.55
+2026-11-19 16:12:08.882 - MultiProcessServiceManager_9a86787f - WARNING - Optional service 'gpu_telemetry_manager' (gpu_telemetry_manager) missed heartbeats on 2 consecutive ticks; dropping it and continuing the benchmark without it.
+2026-11-19 16:12:08.970 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.63
+2026-11-19 16:12:09.020 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 242 tokens (requested 512, diff -52.7%)
+2026-11-19 16:12:09.971 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.71
+2026-11-19 16:12:10.972 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.78
+2026-11-19 16:12:11.302 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 175 tokens (requested 512, diff -65.8%)
+2026-11-19 16:12:12.305 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.87
+2026-11-19 16:12:13.305 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 0.92
+2026-11-19 16:12:13.513 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 43 tokens (requested 512, diff -91.6%)
+2026-11-19 16:12:14.638 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.00
+2026-11-19 16:12:15.261 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 315 tokens (requested 512, diff -38.5%)
+2026-11-19 16:12:15.638 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.06
+2026-11-19 16:12:16.638 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.14
+2026-11-19 16:12:17.563 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 411 tokens (requested 512, diff -19.7%)
+2026-11-19 16:12:17.639 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.22
+2026-11-19 16:12:18.642 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.29
+2026-11-19 16:12:19.643 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.37
+2026-11-19 16:12:20.976 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.46
+2026-11-19 16:12:22.261 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 478 tokens (requested 512, diff -6.6%)
+2026-11-19 16:12:22.308 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.54
+2026-11-19 16:12:23.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.63
+2026-11-19 16:12:23.651 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 453 tokens (requested 512, diff -11.5%)
+2026-11-19 16:12:23.783 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 116 tokens (requested 512, diff -77.3%)
+2026-11-19 16:12:24.647 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 102 tokens (requested 512, diff -80.1%)
+2026-11-19 16:12:24.680 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 394 tokens (requested 512, diff -23.0%)
+2026-11-19 16:12:24.974 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.71
+2026-11-19 16:12:25.159 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 164 tokens (requested 512, diff -68.0%)
+2026-11-19 16:12:25.975 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.77
+2026-11-19 16:12:26.980 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.83
+2026-11-19 16:12:27.247 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 132 tokens (requested 512, diff -74.2%)
+2026-11-19 16:12:27.328 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 477 tokens (requested 512, diff -6.8%)
+2026-11-19 16:12:28.310 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 1.93
+2026-11-19 16:12:29.310 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.01
+2026-11-19 16:12:30.137 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 113 tokens (requested 512, diff -77.9%)
+2026-11-19 16:12:30.311 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.07
+2026-11-19 16:12:30.542 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 468 tokens (requested 512, diff -8.6%)
+2026-11-19 16:12:31.162 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 136 tokens (requested 512, diff -73.4%)
+2026-11-19 16:12:31.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.16
+2026-11-19 16:12:32.645 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.23
+2026-11-19 16:12:33.108 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 470 tokens (requested 512, diff -8.2%)
+2026-11-19 16:12:33.210 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 486 tokens (requested 512, diff -5.1%)
+2026-11-19 16:12:33.669 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 101 tokens (requested 512, diff -80.3%)
+2026-11-19 16:12:33.978 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.34
+2026-11-19 16:12:34.979 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.41
+2026-11-19 16:12:36.310 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.52
+2026-11-19 16:12:37.311 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.60
+2026-11-19 16:12:37.959 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 247 tokens (requested 512, diff -51.8%)
+2026-11-19 16:12:38.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.72
+2026-11-19 16:12:39.977 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.82
+2026-11-19 16:12:40.701 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 130 tokens (requested 512, diff -74.6%)
+2026-11-19 16:12:40.977 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.88
+2026-11-19 16:12:42.309 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 2.96
+2026-11-19 16:12:42.576 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 348 tokens (requested 512, diff -32.0%)
+2026-11-19 16:12:43.309 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.03
+2026-11-19 16:12:43.329 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 436 tokens (requested 512, diff -14.8%)
+2026-11-19 16:12:44.310 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.09
+2026-11-19 16:12:45.312 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.16
+2026-11-19 16:12:45.465 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 269 tokens (requested 512, diff -47.5%)
+2026-11-19 16:12:46.023 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 21 tokens (requested 512, diff -95.9%)
+2026-11-19 16:12:46.313 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.23
+2026-11-19 16:12:47.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.30
+2026-11-19 16:12:48.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.40
+2026-11-19 16:12:49.645 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.52
+2026-11-19 16:12:50.980 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.63
+2026-11-19 16:12:52.014 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 453 tokens (requested 512, diff -11.5%)
+2026-11-19 16:12:52.312 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.72
+2026-11-19 16:12:52.609 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 248 tokens (requested 512, diff -51.6%)
+2026-11-19 16:12:53.316 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.78
+2026-11-19 16:12:54.155 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 110 tokens (requested 512, diff -78.5%)
+2026-11-19 16:12:54.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.88
+2026-11-19 16:12:55.979 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 3.97
+2026-11-19 16:12:56.982 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.05
+2026-11-19 16:12:57.362 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 311 tokens (requested 512, diff -39.3%)
+2026-11-19 16:12:57.566 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 50 tokens (requested 512, diff -90.2%)
+2026-11-19 16:12:58.312 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.13
+2026-11-19 16:12:59.312 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.20
+2026-11-19 16:13:00.020 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 334 tokens (requested 512, diff -34.8%)
+2026-11-19 16:13:00.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.28
+2026-11-19 16:13:00.629 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 104 tokens (requested 512, diff -79.7%)
+2026-11-19 16:13:01.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.38
+2026-11-19 16:13:02.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.45
+2026-11-19 16:13:02.702 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 247 tokens (requested 512, diff -51.8%)
+2026-11-19 16:13:03.983 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.58
+2026-11-19 16:13:04.983 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.69
+2026-11-19 16:13:05.555 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 75 tokens (requested 512, diff -85.4%)
+2026-11-19 16:13:05.868 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 437 tokens (requested 512, diff -14.6%)
+2026-11-19 16:13:06.315 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.79
+2026-11-19 16:13:06.665 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 146 tokens (requested 512, diff -71.5%)
+2026-11-19 16:13:06.936 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 3 tokens (requested 512, diff -99.4%)
+2026-11-19 16:13:07.317 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.84
+2026-11-19 16:13:08.652 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 4.94
+2026-11-19 16:13:09.340 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 333 tokens (requested 512, diff -35.0%)
+2026-11-19 16:13:09.981 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.06
+2026-11-19 16:13:10.562 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 69 tokens (requested 512, diff -86.5%)
+2026-11-19 16:13:11.088 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 58 tokens (requested 512, diff -88.7%)
+2026-11-19 16:13:11.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.15
+2026-11-19 16:13:11.517 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 28 tokens (requested 512, diff -94.5%)
+2026-11-19 16:13:12.319 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.22
+2026-11-19 16:13:12.373 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 176 tokens (requested 512, diff -65.6%)
+2026-11-19 16:13:13.426 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 125 tokens (requested 512, diff -75.6%)
+2026-11-19 16:13:13.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.30
+2026-11-19 16:13:14.645 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.38
+2026-11-19 16:13:15.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.45
+2026-11-19 16:13:15.896 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 482 tokens (requested 512, diff -5.9%)
+2026-11-19 16:13:16.978 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.55
+2026-11-19 16:13:17.978 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.62
+2026-11-19 16:13:18.979 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.69
+2026-11-19 16:13:19.314 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 432 tokens (requested 512, diff -15.6%)
+2026-11-19 16:13:20.281 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 262 tokens (requested 512, diff -48.8%)
+2026-11-19 16:13:20.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.78
+2026-11-19 16:13:21.028 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 56 tokens (requested 512, diff -89.1%)
+2026-11-19 16:13:21.315 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.85
+2026-11-19 16:13:22.579 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 273 tokens (requested 512, diff -46.7%)
+2026-11-19 16:13:22.650 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 5.95
+2026-11-19 16:13:23.277 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 121 tokens (requested 512, diff -76.4%)
+2026-11-19 16:13:23.980 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.05
+2026-11-19 16:13:24.982 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.13
+2026-11-19 16:13:26.315 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.21
+2026-11-19 16:13:27.316 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.29
+2026-11-19 16:13:27.335 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 175 tokens (requested 512, diff -65.8%)
+2026-11-19 16:13:28.202 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 262 tokens (requested 512, diff -48.8%)
+2026-11-19 16:13:28.322 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.39
+2026-11-19 16:13:29.327 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.52
+2026-11-19 16:13:30.328 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.66
+2026-11-19 16:13:31.333 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 313 tokens (requested 512, diff -38.9%)
+2026-11-19 16:13:31.659 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.80
+2026-11-19 16:13:32.375 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 217 tokens (requested 512, diff -57.6%)
+2026-11-19 16:13:32.983 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 6.90
+2026-11-19 16:13:33.991 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.00
+2026-11-19 16:13:35.315 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.11
+2026-11-19 16:13:36.595 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 74 tokens (requested 512, diff -85.5%)
+2026-11-19 16:13:36.650 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.24
+2026-11-19 16:13:37.655 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.29
+2026-11-19 16:13:38.982 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.43
+2026-11-19 16:13:39.325 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 256 tokens (requested 512, diff -50.0%)
+2026-11-19 16:13:39.983 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.50
+2026-11-19 16:13:40.717 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 306 tokens (requested 512, diff -40.2%)
+2026-11-19 16:13:41.016 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 59 tokens (requested 512, diff -88.5%)
+2026-11-19 16:13:41.316 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.58
+2026-11-19 16:13:42.649 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.69
+2026-11-19 16:13:43.633 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 309 tokens (requested 512, diff -39.6%)
+2026-11-19 16:13:43.982 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.77
+2026-11-19 16:13:44.546 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 172 tokens (requested 512, diff -66.4%)
+2026-11-19 16:13:45.316 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.86
+2026-11-19 16:13:46.541 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 256 tokens (requested 512, diff -50.0%)
+2026-11-19 16:13:46.648 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 7.96
+2026-11-19 16:13:47.486 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 366 tokens (requested 512, diff -28.5%)
+2026-11-19 16:13:47.551 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 168 tokens (requested 512, diff -67.2%)
+2026-11-19 16:13:47.982 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.05
+2026-11-19 16:13:49.313 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.15
+2026-11-19 16:13:50.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.24
+2026-11-19 16:13:51.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.32
+2026-11-19 16:13:52.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.43
+2026-11-19 16:13:53.005 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 462 tokens (requested 512, diff -9.8%)
+2026-11-19 16:13:53.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.50
+2026-11-19 16:13:53.873 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 466 tokens (requested 512, diff -9.0%)
+2026-11-19 16:13:54.153 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 119 tokens (requested 512, diff -76.8%)
+2026-11-19 16:13:54.650 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.57
+2026-11-19 16:13:55.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.65
+2026-11-19 16:13:56.982 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.75
+2026-11-19 16:13:57.770 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 259 tokens (requested 512, diff -49.4%)
+2026-11-19 16:13:58.281 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 136 tokens (requested 512, diff -73.4%)
+2026-11-19 16:13:58.313 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.84
+2026-11-19 16:13:58.453 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 467 tokens (requested 512, diff -8.8%)
+2026-11-19 16:13:59.373 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 8.91
+2026-11-19 16:14:00.645 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.01
+2026-11-19 16:14:01.645 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.09
+2026-11-19 16:14:02.979 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.18
+2026-11-19 16:14:04.312 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.27
+2026-11-19 16:14:05.322 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.34
+2026-11-19 16:14:06.323 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.42
+2026-11-19 16:14:07.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.52
+2026-11-19 16:14:08.980 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.62
+2026-11-19 16:14:10.313 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.72
+2026-11-19 16:14:11.033 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 57 tokens (requested 512, diff -88.9%)
+2026-11-19 16:14:11.315 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.81
+2026-11-19 16:14:12.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.90
+2026-11-19 16:14:12.648 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 104 tokens (requested 512, diff -79.7%)
+2026-11-19 16:14:13.647 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 121 tokens (requested 512, diff -76.4%)
+2026-11-19 16:14:13.648 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 9.97
+2026-11-19 16:14:14.543 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 74 tokens (requested 512, diff -85.5%)
+2026-11-19 16:14:14.981 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.06
+2026-11-19 16:14:16.315 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.15
+2026-11-19 16:14:17.650 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.29
+2026-11-19 16:14:18.979 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.41
+2026-11-19 16:14:19.823 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 184 tokens (requested 512, diff -64.1%)
+2026-11-19 16:14:20.311 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.51
+2026-11-19 16:14:21.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.60
+2026-11-19 16:14:22.012 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 44 tokens (requested 512, diff -91.4%)
+2026-11-19 16:14:22.976 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.67
+2026-11-19 16:14:23.104 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 62 tokens (requested 512, diff -87.9%)
+2026-11-19 16:14:23.507 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 431 tokens (requested 512, diff -15.8%)
+2026-11-19 16:14:24.308 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.76
+2026-11-19 16:14:24.820 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 132 tokens (requested 512, diff -74.2%)
+2026-11-19 16:14:25.513 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 33 tokens (requested 512, diff -93.6%)
+2026-11-19 16:14:25.641 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.84
+2026-11-19 16:14:25.813 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 336 tokens (requested 512, diff -34.4%)
+2026-11-19 16:14:26.643 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.89
+2026-11-19 16:14:27.336 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 413 tokens (requested 512, diff -19.3%)
+2026-11-19 16:14:27.896 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 122 tokens (requested 512, diff -76.2%)
+2026-11-19 16:14:27.974 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 10.99
+2026-11-19 16:14:29.116 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 474 tokens (requested 512, diff -7.4%)
+2026-11-19 16:14:29.306 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.06
+2026-11-19 16:14:29.617 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 295 tokens (requested 512, diff -42.4%)
+2026-11-19 16:14:30.327 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 399 tokens (requested 512, diff -22.1%)
+2026-11-19 16:14:30.642 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.16
+2026-11-19 16:14:31.838 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 365 tokens (requested 512, diff -28.7%)
+2026-11-19 16:14:31.974 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.27
+2026-11-19 16:14:32.553 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 254 tokens (requested 512, diff -50.4%)
+2026-11-19 16:14:33.250 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 267 tokens (requested 512, diff -47.9%)
+2026-11-19 16:14:33.307 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.34
+2026-11-19 16:14:34.135 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 305 tokens (requested 512, diff -40.4%)
+2026-11-19 16:14:34.184 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 125 tokens (requested 512, diff -75.6%)
+2026-11-19 16:14:34.639 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.42
+2026-11-19 16:14:35.972 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.51
+2026-11-19 16:14:36.323 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 372 tokens (requested 512, diff -27.3%)
+2026-11-19 16:14:36.447 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 289 tokens (requested 512, diff -43.6%)
+2026-11-19 16:14:36.950 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 366 tokens (requested 512, diff -28.5%)
+2026-11-19 16:14:36.972 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.57
+2026-11-19 16:14:37.973 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.65
+2026-11-19 16:14:38.138 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 466 tokens (requested 512, diff -9.0%)
+2026-11-19 16:14:38.974 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.72
+2026-11-19 16:14:38.999 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 47 tokens (requested 512, diff -90.8%)
+2026-11-19 16:14:39.561 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 86 tokens (requested 512, diff -83.2%)
+2026-11-19 16:14:39.977 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.76
+2026-11-19 16:14:40.980 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.84
+2026-11-19 16:14:42.309 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 11.96
+2026-11-19 16:14:42.539 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 262 tokens (requested 512, diff -48.8%)
+2026-11-19 16:14:43.309 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.04
+2026-11-19 16:14:44.017 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 47 tokens (requested 512, diff -90.8%)
+2026-11-19 16:14:44.310 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.10
+2026-11-19 16:14:45.311 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.17
+2026-11-19 16:14:45.347 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 134 tokens (requested 512, diff -73.8%)
+2026-11-19 16:14:45.372 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 453 tokens (requested 512, diff -11.5%)
+2026-11-19 16:14:46.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.26
+2026-11-19 16:14:47.649 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.34
+2026-11-19 16:14:48.977 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.44
+2026-11-19 16:14:49.978 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.52
+2026-11-19 16:14:50.557 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 46 tokens (requested 512, diff -91.0%)
+2026-11-19 16:14:51.311 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.61
+2026-11-19 16:14:52.585 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 288 tokens (requested 512, diff -43.8%)
+2026-11-19 16:14:52.642 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.71
+2026-11-19 16:14:52.898 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 130 tokens (requested 512, diff -74.6%)
+2026-11-19 16:14:53.001 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 473 tokens (requested 512, diff -7.6%)
+2026-11-19 16:14:53.643 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.78
+2026-11-19 16:14:53.649 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 355 tokens (requested 512, diff -30.7%)
+2026-11-19 16:14:54.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.84
+2026-11-19 16:14:55.062 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 246 tokens (requested 512, diff -52.0%)
+2026-11-19 16:14:55.645 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 12.92
+2026-11-19 16:14:56.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.00
+2026-11-19 16:14:57.978 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.10
+2026-11-19 16:14:58.329 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 249 tokens (requested 512, diff -51.4%)
+2026-11-19 16:14:58.494 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 34 tokens (requested 512, diff -93.4%)
+2026-11-19 16:14:58.979 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.14
+2026-11-19 16:14:59.735 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 428 tokens (requested 512, diff -16.4%)
+2026-11-19 16:14:59.979 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.21
+2026-11-19 16:15:00.534 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 81 tokens (requested 512, diff -84.2%)
+2026-11-19 16:15:01.313 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.29
+2026-11-19 16:15:01.848 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 196 tokens (requested 512, diff -61.7%)
+2026-11-19 16:15:02.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.41
+2026-11-19 16:15:03.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.49
+2026-11-19 16:15:04.120 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 102 tokens (requested 512, diff -80.1%)
+2026-11-19 16:15:04.982 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.57
+2026-11-19 16:15:05.468 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 204 tokens (requested 512, diff -60.2%)
+2026-11-19 16:15:06.313 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.67
+2026-11-19 16:15:06.419 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 125 tokens (requested 512, diff -75.6%)
+2026-11-19 16:15:07.451 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 387 tokens (requested 512, diff -24.4%)
+2026-11-19 16:15:07.644 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.76
+2026-11-19 16:15:08.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.84
+2026-11-19 16:15:09.057 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 215 tokens (requested 512, diff -58.0%)
+2026-11-19 16:15:09.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 13.91
+2026-11-19 16:15:09.866 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 467 tokens (requested 512, diff -8.8%)
+2026-11-19 16:15:10.644 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 96 tokens (requested 512, diff -81.2%)
+2026-11-19 16:15:10.646 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.00
+2026-11-19 16:15:11.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.07
+2026-11-19 16:15:12.391 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 394 tokens (requested 512, diff -23.0%)
+2026-11-19 16:15:12.647 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.14
+2026-11-19 16:15:13.648 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.20
+2026-11-19 16:15:14.548 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 54 tokens (requested 512, diff -89.5%)
+2026-11-19 16:15:14.981 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.27
+2026-11-19 16:15:16.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.36
+2026-11-19 16:15:17.155 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 439 tokens (requested 512, diff -14.3%)
+2026-11-19 16:15:17.314 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.43
+2026-11-19 16:15:18.057 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 65 tokens (requested 512, diff -87.3%)
+2026-11-19 16:15:18.072 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 467 tokens (requested 512, diff -8.8%)
+2026-11-19 16:15:18.649 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.53
+2026-11-19 16:15:19.653 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.61
+2026-11-19 16:15:20.656 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.71
+2026-11-19 16:15:21.987 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.82
+2026-11-19 16:15:22.602 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 378 tokens (requested 512, diff -26.2%)
+2026-11-19 16:15:23.316 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 14.93
+2026-11-19 16:15:24.317 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.03
+2026-11-19 16:15:25.318 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.11
+2026-11-19 16:15:26.097 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 81 tokens (requested 512, diff -84.2%)
+2026-11-19 16:15:26.318 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.18
+2026-11-19 16:15:27.652 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.27
+2026-11-19 16:15:28.313 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 345 tokens (requested 512, diff -32.6%)
+2026-11-19 16:15:28.461 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 15 tokens (requested 512, diff -97.1%)
+2026-11-19 16:15:28.652 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.35
+2026-11-19 16:15:29.653 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.40
+2026-11-19 16:15:30.252 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 207 tokens (requested 512, diff -59.6%)
+2026-11-19 16:15:30.653 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.49
+2026-11-19 16:15:31.653 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.56
+2026-11-19 16:15:31.798 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 419 tokens (requested 512, diff -18.2%)
+2026-11-19 16:15:32.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.63
+2026-11-19 16:15:33.987 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.74
+2026-11-19 16:15:34.671 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 275 tokens (requested 512, diff -46.3%)
+2026-11-19 16:15:35.322 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.83
+2026-11-19 16:15:35.420 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 290 tokens (requested 512, diff -43.4%)
+2026-11-19 16:15:36.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 15.92
+2026-11-19 16:15:36.900 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 479 tokens (requested 512, diff -6.4%)
+2026-11-19 16:15:37.994 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.01
+2026-11-19 16:15:38.406 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 340 tokens (requested 512, diff -33.6%)
+2026-11-19 16:15:38.595 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 36 tokens (requested 512, diff -93.0%)
+2026-11-19 16:15:39.147 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 164 tokens (requested 512, diff -68.0%)
+2026-11-19 16:15:39.380 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.10
+2026-11-19 16:15:40.653 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.18
+2026-11-19 16:15:40.810 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 183 tokens (requested 512, diff -64.3%)
+2026-11-19 16:15:41.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.25
+2026-11-19 16:15:41.924 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 213 tokens (requested 512, diff -58.4%)
+2026-11-19 16:15:42.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.33
+2026-11-19 16:15:43.306 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 120 tokens (requested 512, diff -76.6%)
+2026-11-19 16:15:43.570 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 123 tokens (requested 512, diff -76.0%)
+2026-11-19 16:15:43.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.40
+2026-11-19 16:15:44.656 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.46
+2026-11-19 16:15:45.076 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 60 tokens (requested 512, diff -88.3%)
+2026-11-19 16:15:45.657 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.52
+2026-11-19 16:15:45.869 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 238 tokens (requested 512, diff -53.5%)
+2026-11-19 16:15:46.979 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 474 tokens (requested 512, diff -7.4%)
+2026-11-19 16:15:46.989 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.61
+2026-11-19 16:15:47.951 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 14 tokens (requested 512, diff -97.3%)
+2026-11-19 16:15:47.989 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.66
+2026-11-19 16:15:48.977 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 76 tokens (requested 512, diff -85.2%)
+2026-11-19 16:15:48.990 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.71
+2026-11-19 16:15:49.467 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 28 tokens (requested 512, diff -94.5%)
+2026-11-19 16:15:50.322 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.79
+2026-11-19 16:15:51.433 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 418 tokens (requested 512, diff -18.4%)
+2026-11-19 16:15:51.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.89
+2026-11-19 16:15:52.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 16.98
+2026-11-19 16:15:53.985 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.10
+2026-11-19 16:15:54.987 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.18
+2026-11-19 16:15:55.989 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.27
+2026-11-19 16:15:57.320 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.36
+2026-11-19 16:15:58.653 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.47
+2026-11-19 16:15:59.292 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 224 tokens (requested 512, diff -56.2%)
+2026-11-19 16:15:59.653 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.54
+2026-11-19 16:16:00.849 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 255 tokens (requested 512, diff -50.2%)
+2026-11-19 16:16:00.986 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.62
+2026-11-19 16:16:01.987 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.68
+2026-11-19 16:16:03.320 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.80
+2026-11-19 16:16:03.549 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 313 tokens (requested 512, diff -38.9%)
+2026-11-19 16:16:04.019 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 370 tokens (requested 512, diff -27.7%)
+2026-11-19 16:16:04.320 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.88
+2026-11-19 16:16:04.802 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 389 tokens (requested 512, diff -24.0%)
+2026-11-19 16:16:05.320 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 17.94
+2026-11-19 16:16:06.652 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.05
+2026-11-19 16:16:07.607 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 82 tokens (requested 512, diff -84.0%)
+2026-11-19 16:16:07.652 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.13
+2026-11-19 16:16:08.652 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.18
+2026-11-19 16:16:09.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.25
+2026-11-19 16:16:09.726 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 111 tokens (requested 512, diff -78.3%)
+2026-11-19 16:16:10.657 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.33
+2026-11-19 16:16:11.690 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 115 tokens (requested 512, diff -77.5%)
+2026-11-19 16:16:11.990 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.43
+2026-11-19 16:16:13.323 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.52
+2026-11-19 16:16:14.333 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.60
+2026-11-19 16:16:14.832 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 172 tokens (requested 512, diff -66.4%)
+2026-11-19 16:16:15.656 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.70
+2026-11-19 16:16:16.658 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.78
+2026-11-19 16:16:17.621 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 89 tokens (requested 512, diff -82.6%)
+2026-11-19 16:16:17.994 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.88
+2026-11-19 16:16:18.968 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 24 tokens (requested 512, diff -95.3%)
+2026-11-19 16:16:19.324 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 18.96
+2026-11-19 16:16:19.840 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 131 tokens (requested 512, diff -74.4%)
+2026-11-19 16:16:20.657 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.06
+2026-11-19 16:16:21.480 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 260 tokens (requested 512, diff -49.2%)
+2026-11-19 16:16:21.990 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.15
+2026-11-19 16:16:22.420 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 303 tokens (requested 512, diff -40.8%)
+2026-11-19 16:16:22.470 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 205 tokens (requested 512, diff -60.0%)
+2026-11-19 16:16:22.990 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.22
+2026-11-19 16:16:23.984 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 44 tokens (requested 512, diff -91.4%)
+2026-11-19 16:16:23.991 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.31
+2026-11-19 16:16:25.324 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.42
+2026-11-19 16:16:25.453 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 404 tokens (requested 512, diff -21.1%)
+2026-11-19 16:16:26.657 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.56
+2026-11-19 16:16:26.670 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 155 tokens (requested 512, diff -69.7%)
+2026-11-19 16:16:27.658 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.66
+2026-11-19 16:16:27.815 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 118 tokens (requested 512, diff -77.0%)
+2026-11-19 16:16:28.187 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 266 tokens (requested 512, diff -48.0%)
+2026-11-19 16:16:28.990 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.77
+2026-11-19 16:16:30.321 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.87
+2026-11-19 16:16:31.437 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 433 tokens (requested 512, diff -15.4%)
+2026-11-19 16:16:31.566 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 62 tokens (requested 512, diff -87.9%)
+2026-11-19 16:16:31.654 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 19.97
+2026-11-19 16:16:32.988 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.06
+2026-11-19 16:16:34.072 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 51 tokens (requested 512, diff -90.0%)
+2026-11-19 16:16:34.322 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.15
+2026-11-19 16:16:35.322 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.23
+2026-11-19 16:16:36.323 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.31
+2026-11-19 16:16:37.656 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.42
+2026-11-19 16:16:38.658 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.49
+2026-11-19 16:16:39.662 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.58
+2026-11-19 16:16:40.993 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.68
+2026-11-19 16:16:41.095 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 432 tokens (requested 512, diff -15.6%)
+2026-11-19 16:16:41.162 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 204 tokens (requested 512, diff -60.2%)
+2026-11-19 16:16:41.996 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.74
+2026-11-19 16:16:43.027 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 391 tokens (requested 512, diff -23.6%)
+2026-11-19 16:16:43.327 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.83
+2026-11-19 16:16:44.328 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.92
+2026-11-19 16:16:45.328 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 20.98
+2026-11-19 16:16:46.017 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 35 tokens (requested 512, diff -93.2%)
+2026-11-19 16:16:46.329 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.04
+2026-11-19 16:16:47.663 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.15
+2026-11-19 16:16:47.671 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 57 tokens (requested 512, diff -88.9%)
+2026-11-19 16:16:48.167 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 81 tokens (requested 512, diff -84.2%)
+2026-11-19 16:16:48.665 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.21
+2026-11-19 16:16:49.724 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 212 tokens (requested 512, diff -58.6%)
+2026-11-19 16:16:49.996 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.30
+2026-11-19 16:16:51.331 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.39
+2026-11-19 16:16:51.926 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 217 tokens (requested 512, diff -57.6%)
+2026-11-19 16:16:52.664 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.47
+2026-11-19 16:16:53.665 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.56
+2026-11-19 16:16:54.550 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 380 tokens (requested 512, diff -25.8%)
+2026-11-19 16:16:54.668 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.63
+2026-11-19 16:16:55.619 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 298 tokens (requested 512, diff -41.8%)
+2026-11-19 16:16:55.998 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.73
+2026-11-19 16:16:56.038 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 331 tokens (requested 512, diff -35.4%)
+2026-11-19 16:16:56.160 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 97 tokens (requested 512, diff -81.1%)
+2026-11-19 16:16:57.000 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.78
+2026-11-19 16:16:58.001 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.85
+2026-11-19 16:16:58.452 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 228 tokens (requested 512, diff -55.5%)
+2026-11-19 16:16:59.334 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 21.94
+2026-11-19 16:16:59.825 - aiperf.metrics.types.osl_mismatch_metrics - WARNING - OSL mismatch: got 212 tokens (requested 512, diff -58.6%)
+2026-11-19 16:17:00.402 - PhaseRunner - INFO - Timeout of 299.999842273s elapsed for event 'profiling phase sending'
+2026-11-19 16:17:00.402 - PhaseRunner - NOTICE - Phase profiling (profiling) sending complete | sent=599, completed=598, in_flight=1 | sessions: sent=599, completed=598 | timeout_triggered=True
+2026-11-19 16:17:00.402 - PhaseRunner - INFO - Waiting for event 'profiling phase credits returned' with timeout of infs
+2026-11-19 16:17:00.403 - records_manager - INFO - Sent 599 requests. Waiting for all to complete...
+2026-11-19 16:17:00.666 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 22.04
+2026-11-19 16:17:00.996 - PhaseRunner - NOTICE - Phase profiling (profiling) complete | completed=599, cancelled=0, errors=0 | sessions: completed=599, cancelled=0 | elapsed=300.59s
+2026-11-19 16:17:00.996 - PhaseOrchestrator_4b70dd7c - NOTICE - All credits completed
+2026-11-19 16:17:00.996 - system_controller - INFO - Received credits complete from 'timing_manager'
+2026-11-19 16:17:00.996 - system_controller - INFO - System state: profiling -> processing
+2026-11-19 16:17:00.996 - records_manager - INFO - Received CREDIT_PHASE_COMPLETE message, Phase complete: PhaseRecordsStats(phase=CreditPhase.PROFILING, phase_index=1, profiling_index=0, phase_name='profiling', phase_kind='profiling', start_ns=1795104720402379248, sent_end_ns=1795105020402657650, requests_end_ns=1795105020995863627, baseline_start_ns=1795104720402364820, baseline_end_ns=1795105020995872734, total_expected_requests=None, expected_duration_sec=None, expected_num_sessions=None, expected_grace_period_sec=None, final_requests_sent=None, final_requests_completed=599, final_requests_cancelled=0, final_request_errors=0, final_sent_sessions=None, final_completed_sessions=None, final_cancelled_sessions=None, timeout_triggered=True, grace_period_timeout_triggered=False, was_cancelled=False, records_end_ns=None, success_records=598, error_records=0)
+2026-11-19 16:17:00.997 - records_manager - NOTICE - All requests have completed, please wait for the results to be processed (currently 598 of 599 records processed)...
+2026-11-19 16:17:00.997 - records_manager - INFO - All credits complete, please wait for the results to be processed...
+2026-11-19 16:17:01.003 - records_manager - INFO - Processed 599 valid requests and 0 errors (599 total).
+2026-11-19 16:17:01.003 - records_manager - INFO - Received all records, processing now...
+2026-11-19 16:17:01.011 - server_metrics_manager - INFO - Waiting 2.0s for server metrics flush period...
+2026-11-19 16:17:01.999 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 22.07
+2026-11-19 16:17:02.998 - server_metrics_manager - INFO - Server Metrics: Profiling complete, capturing final metrics...
+2026-11-19 16:17:03.012 - aiperf.server_metrics.export_stats - WARNING - Detected 1 counter reset(s) in counter metric. This typically indicates server restart(s) during profiling. Statistics may be inaccurate. Raw delta: 22.09
+2026-11-19 16:17:04.012 - system_controller - INFO - Waiting for result domains: profile
+2026-11-19 16:17:04.013 - records_manager - INFO - Processing records results...
+2026-11-19 16:17:04.197 - records_manager - INFO - _finalize_and_process_results completed
+2026-11-19 16:17:04.197 - system_controller - INFO - System state: processing -> stopping
+2026-11-19 16:17:04.198 - system_controller - INFO - All results received, initiating shutdown
+2026-11-19 16:17:04.198 - system_controller - INFO - System state: stopping -> shutdown
+2026-11-19 16:17:04.812 - ExporterManager - INFO - Exporting all records
+2026-11-19 16:17:04.910 - OutputsJsonExporter - INFO - Exported 599 records to /ephemeral/hw6/results/load/fp8_dflash_k15_safe/120/profile/outputs.json
+2026-11-19 16:17:04.922 - ExporterManager - INFO - Exporting console data

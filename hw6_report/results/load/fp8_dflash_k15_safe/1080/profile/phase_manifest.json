@@ -1,0 +1,52 @@
+{
+  "phases": [
+    {
+      "end_ns": 1795102973788940881,
+      "error_request_count": 0,
+      "error_summary": [],
+      "metrics_csv": "phases/warmup/profile_export_aiperf.csv",
+      "metrics_json": "phases/warmup/profile_export_aiperf.json",
+      "phase_index": 0,
+      "phase_kind": "warmup",
+      "phase_name": "warmup",
+      "profiling_index": null,
+      "server_metrics_json": "phases/warmup/server_metrics.json",
+      "start_ns": 1795102966293533518,
+      "successful_request_count": 40,
+      "total_request_count": 40,
+      "was_cancelled": false
+    },
+    {
+      "end_ns": 1795103389919637945,
+      "error_request_count": 1230,
+      "error_summary": [
+        {
+          "count": 1230,
+          "error_details": {
+            "cause": "CancelledError()",
+            "cause_chain": [
+              "TimeoutError",
+              "CancelledError"
+            ],
+            "code": null,
+            "details": null,
+            "message": "TimeoutError()",
+            "type": "TimeoutError"
+          }
+        }
+      ],
+      "metrics_csv": "phases/profiling/profile_export_aiperf.csv",
+      "metrics_json": "phases/profiling/profile_export_aiperf.json",
+      "phase_index": 1,
+      "phase_kind": "profiling",
+      "phase_name": "profiling",
+      "profiling_index": 0,
+      "server_metrics_json": "phases/profiling/server_metrics.json",
+      "start_ns": 1795102973790275195,
+      "successful_request_count": 4169,
+      "total_request_count": 5399,
+      "was_cancelled": false
+    }
+  ],
+  "schema_version": 1
+}
