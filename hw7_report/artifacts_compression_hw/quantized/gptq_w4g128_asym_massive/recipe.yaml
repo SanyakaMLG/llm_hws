@@ -1,0 +1,27 @@
+default_stage:
+  default_modifiers:
+    GPTQModifier:
+      config_groups:
+        group_0:
+          targets: [Linear]
+          weights:
+            num_bits: 4
+            type: int
+            symmetric: false
+            group_size: 128
+            strategy: group
+            block_structure: null
+            dynamic: false
+            actorder: !!python/object/apply:compressed_tensors.quantization.quant_args.ActivationOrdering [
+              static]
+            observer: minmax
+            observer_kwargs: {}
+          input_activations: null
+          output_activations: null
+          format: null
+      targets: [Linear]
+      ignore: [lm_head]
+      block_size: 128
+      dampening_frac: 0.01
+      actorder: static
+      offload_hessians: false

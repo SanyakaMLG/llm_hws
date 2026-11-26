@@ -1,0 +1,15 @@
+{
+  "name": "gptq_w4g128_keep_first_last",
+  "method": "gptq",
+  "bits": 4,
+  "group_size": 128,
+  "symmetric": true,
+  "activations": false,
+  "calibration": "massive",
+  "samples": 256,
+  "smoothing_strength": null,
+  "ignore": [
+    "lm_head",
+    "re:model\\.layers\\.(0|35)\\..*"
+  ]
+}

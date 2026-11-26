@@ -1,0 +1,36 @@
+default_stage:
+  default_modifiers:
+    GPTQModifier:
+      config_groups:
+        group_0:
+          targets: [Linear]
+          weights:
+            num_bits: 8
+            type: int
+            symmetric: true
+            group_size: null
+            strategy: channel
+            block_structure: null
+            dynamic: false
+            actorder: null
+            observer: minmax
+            observer_kwargs: {}
+          input_activations:
+            num_bits: 8
+            type: int
+            symmetric: true
+            group_size: null
+            strategy: token
+            block_structure: null
+            dynamic: true
+            actorder: null
+            observer: null
+            observer_kwargs: {}
+          output_activations: null
+          format: null
+      targets: [Linear]
+      ignore: [lm_head]
+      block_size: 128
+      dampening_frac: 0.01
+      actorder: static
+      offload_hessians: false
